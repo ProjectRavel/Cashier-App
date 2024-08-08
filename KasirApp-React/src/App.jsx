@@ -1,8 +1,22 @@
 import { Col, Container, Row } from "react-bootstrap";
 import "./App.css";
-import { Hasil, ListCategories, NavbarComponents } from "./components"
+import { Hasil, ListCategories, NavbarComponents } from "./components";
+import { useEffect, useState } from "react";
+import { API_URL } from "./utils/constans";
+import axios from "axios";
 
 function App() {
+  const [menus, setMenus] = useState([]);
+
+  useEffect(() => {
+    axios.get(API_URL + "products").then((response) => {
+      const menus = response.data;
+      setMenus(menus);
+    }).catch((error) => {
+      console.error("Error fetching data: ", error);
+    });
+  }, []);
+
   return (
     <>
       <NavbarComponents />
@@ -18,7 +32,7 @@ function App() {
               </div>
             </Col>
             <Hasil />
-          </Row>  
+          </Row>
         </Container>
       </div>
     </>
