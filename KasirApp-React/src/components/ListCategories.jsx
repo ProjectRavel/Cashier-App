@@ -20,7 +20,7 @@ const Icon = ({ nama }) => {
   return <FontAwesomeIcon icon={faUtensilSpoon} className="mx-2" />;
 };
 
-function ListCategories() {
+function ListCategories({ filterMenusByCategory, categoriesSelected }) {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -43,7 +43,11 @@ function ListCategories() {
       <ListGroup>
         {categories &&
           categories.map((category) => (
-            <ListGroup.Item key={category.id}>
+            <ListGroup.Item
+              key={category.id}
+              onClick={() => filterMenusByCategory(category.nama)}
+              className={categoriesSelected === category.nama ? "listCategories selected" : "listCategories"}
+            >
               <h5>
                 <Icon nama={category.nama} />
                 {category.nama}

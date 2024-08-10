@@ -6,3 +6,14 @@ body{
 .navbar{
     background-color: #00a0f6;
 }
+
+.listCategories{
+    list-style-type: none;
+    border: none;
+    cursor: pointer;
+}
+
+.listCategories.selected{
+    background-color: #00a0f6;
+    color: white;
+}
