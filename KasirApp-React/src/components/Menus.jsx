@@ -3,10 +3,10 @@ import { Col } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import { FormatIDR } from "../utils/utils"; // Mengimpor fungsi FormatIDR
 
-function Menus({ menu }) {
+function Menus({ menu, masukkanKeKeranjang }) {
   return (
     <Col md={4} xs={6}>
-      <Card className="shadow">
+      <Card className="shadow" onClick={() => masukkanKeKeranjang(menu)}>
         <Card.Img
           variant="top"
           src={
