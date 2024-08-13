@@ -185,9 +185,8 @@
   ],
   "keranjangs": [
     {
-      "id": "5f4e",
-      "jumlah": 1,
-      "total_harga": 16000,
+      "jumlah": 12,
+      "total_harga": 192000,
       "product": {
         "id": "1",
         "kode": "K-01",
@@ -198,6 +197,126 @@
         "category": {
           "id": 1,
           "nama": "Makanan"
+        }
+      },
+      "id": "5f4e"
+    },
+    {
+      "jumlah": 10,
+      "total_harga": 140000,
+      "product": {
+        "id": "2",
+        "kode": "K-02",
+        "nama": "Nasi Goreng Telur",
+        "harga": 14000,
+        "is_ready": true,
+        "gambar": "nasi-goreng-telor.jpg",
+        "category": {
+          "id": 1,
+          "nama": "Makanan"
+        }
+      },
+      "id": "bd7c"
+    },
+    {
+      "jumlah": 9,
+      "total_harga": 108000,
+      "product": {
+        "id": "3",
+        "kode": "K-03",
+        "nama": "Nasi Rames",
+        "harga": 12000,
+        "is_ready": true,
+        "gambar": "nasi-rames.jpg",
+        "category": {
+          "id": 1,
+          "nama": "Makanan"
+        }
+      },
+      "id": "7ad3"
+    },
+    {
+      "id": "293a",
+      "jumlah": 1,
+      "total_harga": 10000,
+      "product": {
+        "id": "6",
+        "kode": "K-06",
+        "nama": "Bakso",
+        "harga": 10000,
+        "is_ready": true,
+        "gambar": "bakso.jpg",
+        "category": {
+          "id": 1,
+          "nama": "Makanan"
+        }
+      }
+    },
+    {
+      "id": "e805",
+      "jumlah": 1,
+      "total_harga": 15000,
+      "product": {
+        "id": "10",
+        "kode": "K-010",
+        "nama": "Cheese Burger",
+        "harga": 15000,
+        "is_ready": true,
+        "gambar": "cheese-burger.jpg",
+        "category": {
+          "id": 3,
+          "nama": "Cemilan"
+        }
+      }
+    },
+    {
+      "jumlah": 2,
+      "total_harga": 10000,
+      "product": {
+        "id": "9",
+        "kode": "K-09",
+        "nama": "Kentang Goreng",
+        "harga": 5000,
+        "is_ready": true,
+        "gambar": "kentang-goreng.jpg",
+        "category": {
+          "id": 3,
+          "nama": "Cemilan"
+        }
+      },
+      "id": "0939"
+    },
+    {
+      "jumlah": 2,
+      "total_harga": 14000,
+      "product": {
+        "id": "12",
+        "kode": "K-012",
+        "nama": "Es Jeruk",
+        "harga": 7000,
+        "is_ready": true,
+        "gambar": "es-jeruk.jpg",
+        "category": {
+          "id": 2,
+          "nama": "Minuman"
+        }
+      },
+      "id": "2607"
+    },
+    {
+      "id": "93d8",
+      "jumlah": 1,
+      "total_harga": 15000,
+      "product": {
+        "id": "11",
+        "kode": "K-011",
+        "nama": "Coffe Late",
+        "harga": 15000,
+        "is_ready": true,
+        "gambar": "coffe-late.jpg",
+        "category": {
+          "id": 2,
+          "nama": "Minuman"
         }
       }
     }

@@ -1,10 +1,14 @@
 import { Col, ListGroup, Row, Card } from "react-bootstrap";
 import { FormatIDR } from "../utils/utils";
 import "./Hasil.css"; // Pastikan menambahkan file CSS untuk styling tambahan
+import TotalBayar from "./TotalBayar";
 
 function Hasil({ keranjangs }) {
-  const totalHarga = keranjangs.reduce((total, keranjang) => total + keranjang.total_harga, 0);
-    
+  const totalHarga = keranjangs.reduce(
+    (total, keranjang) => total + keranjang.total_harga,
+    0
+  );
+
   return (
     <Col md={3} className="mt-2">
       <Card>
@@ -17,7 +21,10 @@ function Hasil({ keranjangs }) {
           <ListGroup variant="flush">
             {keranjangs.length !== 0 ? (
               keranjangs.map((keranjang) => (
-                <ListGroup.Item key={keranjang.id} className="d-flex justify-content-between align-items-center">
+                <ListGroup.Item
+                  key={keranjang.id}
+                  className="d-flex justify-content-between align-items-center"
+                >
                   <Row className="w-100">
                     <Col xs={3}>
                       <strong>{keranjang.jumlah}x</strong>
@@ -30,12 +37,14 @@ function Hasil({ keranjangs }) {
                 </ListGroup.Item>
               ))
             ) : (
-              <ListGroup.Item className="text-center">Keranjang kosong</ListGroup.Item>
+              <ListGroup.Item className="text-center">
+                Keranjang kosong
+              </ListGroup.Item>
             )}
           </ListGroup>
         </Card.Body>
-        <Card.Footer className="text-right">
-          <h5>Total: Rp. {FormatIDR(totalHarga)}</h5>
+        <Card.Footer className="text-right bg-primary text-white">
+          <TotalBayar totalBayar={totalHarga}/>
         </Card.Footer>
       </Card>
     </Col>

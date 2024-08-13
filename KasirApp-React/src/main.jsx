@@ -1,11 +1,33 @@
-import { StrictMode } from "react";
+import * as React from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App.jsx";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./index.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./pages/Home";
+import './main.css'
+import Success from "./pages/Success";
+import Error from "./pages/Error";
+import { NavbarComponents } from "./components";
+import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+    errorElement: <Error />,
+  },
+  {
+    path: "/sukses",
+    element: <Success />,
+    errorElement: <Error />,
+  },
+  {
+    path: "*", // Tangani semua rute yang tidak ditemukan
+    element: <Error />,
+  },
+]);
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
+  <React.StrictMode>
+     <NavbarComponents />
+    <RouterProvider router={router} />
+  </React.StrictMode>
 );

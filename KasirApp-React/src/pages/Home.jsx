@@ -12,6 +12,7 @@ function Home() {
   const [keranjangs, setKeranjangs] = useState([]);
 
   useEffect(() => {
+    <NavbarComponents />
     axios
       .get(API_URL + "products")
       .then((response) => {
@@ -114,8 +115,7 @@ function Home() {
 
   return (
     <>
-      <NavbarComponents />
-      <div className="mt-3  ">
+      <div className="mt-3">
         <Container fluid>
           <Row>
             <ListCategories
