@@ -1,9 +1,15 @@
-import { Col, ListGroup, Row, Card } from "react-bootstrap";
+import { Col, ListGroup, Row, Card, Modal, Button } from "react-bootstrap";
 import { FormatIDR } from "../utils/utils";
 import "./Hasil.css"; // Pastikan menambahkan file CSS untuk styling tambahan
 import TotalBayar from "./TotalBayar";
+import { useState } from "react";
 
 function Hasil({ keranjangs }) {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   const totalHarga = keranjangs.reduce(
     (total, keranjang) => total + keranjang.total_harga,
     0
@@ -24,6 +30,7 @@ function Hasil({ keranjangs }) {
                 <ListGroup.Item
                   key={keranjang.id}
                   className="d-flex justify-content-between align-items-center"
+                  onClick={handleShow}
                 >
                   <Row className="w-100">
                     <Col xs={3}>
@@ -42,10 +49,28 @@ function Hasil({ keranjangs }) {
               </ListGroup.Item>
             )}
           </ListGroup>
+          <Modal show={show} onHide={handleClose}>
+            <Modal.Header closeButton>
+              <Modal.Title>Modal heading</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              Woohoo, you are reading this text in a modal!
+            </Modal.Body>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={handleClose}>
+                Close
+              </Button>
+              <Button variant="primary" onClick={handleClose}>
+                Save Changes
+              </Button>
+            </Modal.Footer>
+          </Modal>
         </Card.Body>
-        <Card.Footer className="text-right bg-primary text-white">
-          <TotalBayar totalBayar={totalHarga}/>
-        </Card.Footer>
+        {keranjangs.length > 0 && (
+          <Card.Footer className="text-right bg-primary text-white">
+            <TotalBayar totalBayar={totalHarga} keranjangs={keranjangs} />
+          </Card.Footer>
+        )}
       </Card>
     </Col>
   );

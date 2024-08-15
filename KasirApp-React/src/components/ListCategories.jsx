@@ -7,9 +7,12 @@ import {
   faUtensilSpoon,
   faCoffee,
   faCheese,
+  faCompass,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Icon = ({ nama }) => {
+  if(nama === "All")
+    return <FontAwesomeIcon icon={faCompass} className="mx-2" />
   if (nama === "Makanan")
     return <FontAwesomeIcon icon={faUtensilSpoon} className="mx-2" />;
   if (nama === "Minuman")
@@ -48,7 +51,7 @@ function ListCategories({ filterMenusByCategory, categoriesSelected }) {
               onClick={() => filterMenusByCategory(category.nama)}
               className={categoriesSelected === category.nama ? "listCategories selected" : "listCategories"}
             >
-              <h5>
+              <h5 className="fs-6">
                 <Icon nama={category.nama} />
                 {category.nama}
               </h5>

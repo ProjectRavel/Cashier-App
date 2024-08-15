@@ -2,7 +2,7 @@ import * as React from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
-import './main.css'
+import "./main.css";
 import Success from "./pages/Success";
 import Error from "./pages/Error";
 import { NavbarComponents } from "./components";
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-     <NavbarComponents />
+    <NavbarComponents />
     <RouterProvider router={router} />
   </React.StrictMode>
 );

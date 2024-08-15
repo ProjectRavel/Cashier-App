@@ -8,11 +8,11 @@ import Swal from "sweetalert2";
 
 function Home() {
   const [menus, setMenus] = useState([]);
-  const [categoriesSelected, setCategoriesSelected] = useState("Makanan");
+  const [categoriesSelected, setCategoriesSelected] = useState("All");
   const [keranjangs, setKeranjangs] = useState([]);
 
   useEffect(() => {
-    <NavbarComponents />
+    <NavbarComponents />;
     axios
       .get(API_URL + "products")
       .then((response) => {
@@ -39,16 +39,30 @@ function Home() {
 
   const filterMenusByCategory = (category) => {
     setCategoriesSelected(category);
-    axios
-      .get(API_URL + "products?category.nama=" + category)
-      .then((response) => {
-        const menus = response.data;
-        setMenus(menus);
-      })
-      .catch((error) => {
-        console.error("Error fetching data: ", error);
-      });
+    if (category == "All") {
+      axios
+        .get(API_URL + "products")
+        .then((response) => {
+          const menus = response.data;
+          setMenus(menus);
+          console.log(menus)
+        })
+        .catch((error) => {
+          console.error("Error fetching data: ", error);
+        });
+    }else{
+      axios
+        .get(API_URL + "products?category.nama=" + category)
+        .then((response) => {
+          const menus = response.data;
+          setMenus(menus);
+        })
+        .catch((error) => {
+          console.error("Error fetching data: ", error);
+        });
+    }
   };
+  
   const updateKeranjangs = () => {
     axios
       .get(API_URL + "keranjangs")
