@@ -31,7 +31,7 @@ function ModalKeranjang({
               <strong>Rp.{FormatIDR(keranjangDetails.total_harga)}</strong>
             </p>
           </Form.Group>
-
+          
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
             <Form.Label>Jumlah : </Form.Label> <br />
             <Button

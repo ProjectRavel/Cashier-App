@@ -8,6 +8,8 @@ import ModalKeranjang from "./ModalKeranjang";
 import { API_URL } from "../utils/constans";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPenToSquare, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 function Hasil({ keranjangs, setKeranjangs }) {
   console.log(keranjangs);
@@ -94,12 +96,34 @@ function Hasil({ keranjangs, setKeranjangs }) {
           text: "You clicked the button!",
           icon: "success",
         });
+
         const updatedKeranjangs = keranjangs.map((keranjang) =>
           keranjang.id === keranjangDetail.id ? { ...res.data } : keranjang
         );
+
         setKeranjangs(updatedKeranjangs);
 
         handleClose();
+      });
+  };
+
+  const removeItem = (keranjang) => {
+    axios
+      .delete(API_URL + "keranjangs/" + keranjang.id)
+      .then(() => {
+        Swal.fire({
+          title: "Item Berhasil Dihapus",
+          text: "You clicked the button!",
+          icon: "success",
+        });
+
+        const updatedKeranjangs = keranjangs.filter(
+          (item) => item.id!== keranjang.id
+        );
+        setKeranjangs(updatedKeranjangs);
+      })
+      .catch((err) => {
+        console.error(err);
       });
   };
 
@@ -109,7 +133,7 @@ function Hasil({ keranjangs, setKeranjangs }) {
   );
 
   return (
-    <Col md={3} className="mt-2">
+    <Col md={4} className="mt-2">
       <Card>
         <Card.Header>
           <h4>
@@ -123,7 +147,6 @@ function Hasil({ keranjangs, setKeranjangs }) {
                 <ListGroup.Item
                   key={keranjang.id}
                   className="d-flex justify-content-between align-items-center"
-                  onClick={() => handleShow(keranjang)}
                 >
                   <Row className="w-100">
                     <Col xs={3}>
@@ -132,6 +155,33 @@ function Hasil({ keranjangs, setKeranjangs }) {
                     <Col xs={9}>
                       <h5 className="mb-1">{keranjang.product.nama}</h5>
                       <div>Rp. {FormatIDR(keranjang.total_harga)}</div>
+                      {keranjang.keterangan && (
+                        <div className="mb-1">
+                          <span className="opacity-100">Keterangan:</span>{" "}
+                          <span className="opacity-75">
+                            {keranjang.keterangan}
+                          </span>
+                        </div>
+                      )}
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col
+                      xs={12}
+                      className="d-flex justify-content-around gap-2"
+                    >
+                      <button
+                        className="btn btn-sm btn-primary"
+                        onClick={() => handleShow(keranjang)}
+                      >
+                        <FontAwesomeIcon icon={faPenToSquare} />
+                      </button>{" "}
+                      <button
+                        className="btn btn-sm btn-danger"
+                        onClick={() => removeItem(keranjang)}
+                      >
+                        <FontAwesomeIcon icon={faTrash} />
+                      </button>
                     </Col>
                   </Row>
                 </ListGroup.Item>
