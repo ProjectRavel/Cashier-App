@@ -76,57 +76,57 @@ function Home() {
   };
 
   // Di dalam masukkanKeKeranjang
-  const masukkanKeKeranjang = (value) => {
-    axios
-      .get(API_URL + "keranjangs?product.id=" + value.id)
-      .then((response) => {
-        if (response.data.length === 0) {
-          const keranjang = {
-            jumlah: 1,
-            total_harga: value.harga,
-            product: value,
-          };
+  const masukkanKeKeranjang = async (value) => {
+    try{
+      Swal.fire({
+        title: "Menambahkan ke Keranjang...",
+        text: "Mohon tunggu beberapa saat.",
+        icon: "info",
+        allowOutsideClick: false,
+        showConfirmButton: false,
+      });
 
-          axios
-            .post(API_URL + "keranjangs", keranjang)
-            .then(() => {
-              Swal.fire({
-                title: "Sukses Masuk Keranjang!",
-                text: `${keranjang.product.nama} Berhasil Ditambahkan!`,
-                icon: "success",
-              });
-              updateKeranjangs(); // Update keranjangs setelah ditambahkan
-            })
-            .catch((error) => {
-              console.error("Error fetching data: ", error);
-            });
-        } else {
+      const response = await   axios
+      .get(API_URL + "keranjangs?product.id=" + value.id)
+      if (response.data.length === 0) {
+        const keranjang = {
+          jumlah: 1,
+          total_harga: value.harga,
+          product: value,
+        };
+
+        await axios.post(API_URL + "keranjangs", keranjang)
+        Swal.fire({
+          title: "Sukses Masuk Keranjang!",
+          text: `${keranjang.product.nama} Berhasil Ditambahkan!`,
+          icon: "success",
+        });
+    } else {
           const keranjang = {
             jumlah: response.data[0].jumlah + 1,
             total_harga: response.data[0].total_harga + value.harga,
             product: value,
           };
 
-          axios
-            .put(API_URL + "keranjangs/" + response.data[0].id, keranjang)
-            .then(() => {
-              Swal.fire({
+          await axios.put(API_URL + "keranjangs/" + response.data[0].id, keranjang)
+            
+            Swal.fire({
                 title: "Sukses Masuk Keranjang!",
                 text: `${keranjang.product.nama} Berhasil Ditambahkan!`,
                 icon: "success",
               });
-              updateKeranjangs(); // Update keranjangs setelah diupdate
-            })
-            .catch((error) => {
-              console.error("Error fetching data: ", error);
+            }
+            updateKeranjangs();
+          }catch (e) {
+            Swal.fire({
+              title: "Gagal Menambahkan ke Keranjang!",
+              text: "Terdapat kesalahan saat menambahkan produk ke keranjang. Silahkan coba lagi.",
+              icon: "error",
+              confirmButtonText: "Coba Lagi",
             });
+              console.error("Error fetching data: ", e);
+          }
         }
-      })
-      .catch((error) => {
-        console.error("Error fetching data: ", error);
-      });
-  };
-
   return (
     <>
       <div className="mt-3">
