@@ -1,7 +1,7 @@
+/* eslint-disable react/prop-types */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FormatIDR } from "../utils/utils";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import axios from "axios";
 import { API_URL } from "../utils/constans";
@@ -18,6 +18,24 @@ function TotalBayar({ totalBayar, keranjangs }) {
       confirmButtonText: "Ya",
     }).then((result) => {
       if (result.isConfirmed) {
+        axios.get(API_URL + "pesanans").then((response) => {
+          for (var i = 0; i < response.data.length; i++) {
+            axios
+              .delete(API_URL + "pesanans/" + response.data[i].id)
+              .then((res) => {
+                console.log(res);
+              })
+              .catch((err) => {
+                Swal.fire({
+                  title: "Gagal Melakukan Pembayaran!",
+                  text: "Terdapat kesalahan saat melakukan pembayaran. Silahkan coba lagi.",
+                  icon: "error",
+                  confirmButtonText: "Coba Lagi",
+                });
+                console.log(err);
+              });
+          }
+        });
         const pesanan = {
           total_pembayaran: totalBayarPembayaran,
           menus: keranjangsItem,
@@ -33,23 +51,27 @@ function TotalBayar({ totalBayar, keranjangs }) {
               confirmButtonText: "Lihat Pesanan",
             }).then(() => {
               window.location.href = "/sukses";
-              
-              keranjangsItem.map(keranjang => {
-                return axios.delete(API_URL + "keranjangs/" + keranjang.id).then((res) => {
-                  console.log(res)
-                }).catch((err) => {
-                  console.error(err)
-                })
-              })
+
+              keranjangsItem.map((keranjang) => {
+                return axios
+                  .delete(API_URL + "keranjangs/" + keranjang.id)
+                  .then((res) => {
+                    console.log(res);
+                  })
+                  .catch((err) => {
+                    console.error(err);
+                  });
+              });
             });
           })
-          .catch((error) => {
+          .catch((err) => {
             Swal.fire({
               title: "Gagal Melakukan Pembayaran!",
               text: "Terdapat kesalahan saat melakukan pembayaran. Silahkan coba lagi.",
               icon: "error",
               confirmButtonText: "Coba Lagi",
             });
+            console.log(err)
           });
       }
     });

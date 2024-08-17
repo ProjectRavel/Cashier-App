@@ -1,34 +1,16 @@
-/* Hasil.css */
-.card-header {
-  background-color: #f8f9fa;
-  /* Warna latar belakang header */
-  border-bottom: 1px solid #dee2e6;
+.keranjang-item {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 1rem;
+  transition: all 0.3s ease-in-out;
 }
 
-.card-body {
-  padding: 1.5rem;
+.keranjang-item:hover {
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.card-footer {
-  background-color: #f8f9fa;
-  border-top: 1px solid #dee2e6;
-}
-
-.list-group-item {
-  border: none;
-  /* Menghapus border default dari ListGroup.Item */
-}
-
-.list-group-item:last-child {
-  border-bottom: none;
-}
-
-.mb-1 {
-  margin-bottom: .25rem;
-}
-
-.hover-opacity:hover {
-  transition: 0.4s;
-  animation: ease-in-out;
-  color: rgb(24, 144, 255);
+.total-harga {
+  font-weight: bold;
+  color: #333;
 }

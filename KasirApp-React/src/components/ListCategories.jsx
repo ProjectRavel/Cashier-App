@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import { Col, ListGroup } from "react-bootstrap";
 import { API_URL } from "../utils/constans";

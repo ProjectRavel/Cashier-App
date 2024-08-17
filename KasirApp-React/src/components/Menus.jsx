@@ -6,7 +6,7 @@ import { FormatIDR } from "../utils/utils"; // Mengimpor fungsi FormatIDR
 function Menus({ menu, masukkanKeKeranjang }) {
   return (
     <Col md={4} xs={6}>
-      <Card className="shadow" onClick={() => masukkanKeKeranjang(menu)}>
+      <Card className="shadow-sm border-0 rounded-4" onClick={() => masukkanKeKeranjang(menu)}>
         <Card.Img
           variant="top"
           src={
@@ -25,3 +25,4 @@ function Menus({ menu, masukkanKeKeranjang }) {
 }
 
 export default Menus;
+

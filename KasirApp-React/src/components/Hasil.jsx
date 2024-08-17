@@ -1,17 +1,110 @@
-import { Col, ListGroup, Row, Card, Modal, Button } from "react-bootstrap";
+/* eslint-disable react/prop-types */
+import { Col, ListGroup, Row, Card } from "react-bootstrap";
 import { FormatIDR } from "../utils/utils";
-import "./Hasil.css"; // Pastikan menambahkan file CSS untuk styling tambahan
+import "./Hasil.css"; // Make sure to add the CSS file for additional styling
 import TotalBayar from "./TotalBayar";
 import { useState } from "react";
+import ModalKeranjang from "./ModalKeranjang";
+import { API_URL } from "../utils/constans";
+import axios from "axios";
+import Swal from "sweetalert2";
 
-function Hasil({ keranjangs }) {
+function Hasil({ keranjangs, setKeranjangs }) {
+  console.log(keranjangs);
   const [show, setShow] = useState(false);
+  const [keranjangDetail, setKeranjangsDetail] = useState({
+    id: "",
+    jumlah: 0,
+    total_harga: 0,
+    keterangan: "",
+    product: {
+      id: "",
+      kode: "",
+      harga: 0,
+      is_ready: true,
+      gambar: "",
+      nama: "", // Add missing nama field
+      category: {
+        id: "",
+        nama: "",
+      },
+    },
+  });
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleShow = (menukeranjang) => {
+    setShow(true);
+    setKeranjangsDetail({
+      ...menukeranjang, // Directly set all fields from the selected item
+    });
+  };
+
+  const tambah = () => {
+    setKeranjangsDetail((prevState) => {
+      const newJumlah = prevState.jumlah + 1;
+      const newTotalHarga = newJumlah * prevState.product.harga;
+
+      return {
+        ...prevState,
+        jumlah: newJumlah,
+        total_harga: newTotalHarga,
+      };
+    });
+  };
+
+  const kurang = () => {
+    if (keranjangDetail.jumlah > 1) {
+      setKeranjangsDetail((prevState) => {
+        const newJumlah = prevState.jumlah - 1;
+        const newTotalHarga = newJumlah * prevState.product.harga;
+
+        return {
+          ...prevState,
+          jumlah: newJumlah,
+          total_harga: newTotalHarga,
+        };
+      });
+    }
+  };
+
+  const changeHandler = (event) => {
+    setKeranjangsDetail((prevState) => ({
+      ...prevState,
+      keterangan: event.target.value,
+    }));
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(keranjangDetail);
+
+    const data = {
+      id: keranjangDetail.id,
+      jumlah: keranjangDetail.jumlah,
+      total_harga: keranjangDetail.total_harga,
+      product: keranjangDetail.product,
+      keterangan: keranjangDetail.keterangan,
+    };
+
+    axios
+      .put(API_URL + "keranjangs/" + keranjangDetail.id, data)
+      .then((res) => {
+        Swal.fire({
+          title: "Good job!",
+          text: "You clicked the button!",
+          icon: "success",
+        });
+        const updatedKeranjangs = keranjangs.map((keranjang) =>
+          keranjang.id === keranjangDetail.id ? { ...res.data } : keranjang
+        );
+        setKeranjangs(updatedKeranjangs);
+
+        handleClose();
+      });
+  };
 
   const totalHarga = keranjangs.reduce(
-    (total, keranjang) => total + keranjang.total_harga,
+    (total, keranjang) => total + (keranjang.total_harga || 0),
     0
   );
 
@@ -30,7 +123,7 @@ function Hasil({ keranjangs }) {
                 <ListGroup.Item
                   key={keranjang.id}
                   className="d-flex justify-content-between align-items-center"
-                  onClick={handleShow}
+                  onClick={() => handleShow(keranjang)}
                 >
                   <Row className="w-100">
                     <Col xs={3}>
@@ -48,23 +141,16 @@ function Hasil({ keranjangs }) {
                 Keranjang kosong
               </ListGroup.Item>
             )}
+            <ModalKeranjang
+              show={show}
+              handleClose={handleClose}
+              keranjangDetails={keranjangDetail}
+              tambah={tambah}
+              kurang={kurang}
+              changeHandler={changeHandler}
+              handleSubmit={handleSubmit}
+            />
           </ListGroup>
-          <Modal show={show} onHide={handleClose}>
-            <Modal.Header closeButton>
-              <Modal.Title>Modal heading</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-              Woohoo, you are reading this text in a modal!
-            </Modal.Body>
-            <Modal.Footer>
-              <Button variant="secondary" onClick={handleClose}>
-                Close
-              </Button>
-              <Button variant="primary" onClick={handleClose}>
-                Save Changes
-              </Button>
-            </Modal.Footer>
-          </Modal>
         </Card.Body>
         {keranjangs.length > 0 && (
           <Card.Footer className="text-right bg-primary text-white">

@@ -153,7 +153,7 @@ function Home() {
                   ))}
               </Row>
             </Col>
-            <Hasil keranjangs={keranjangs} />
+            <Hasil keranjangs={keranjangs} setKeranjangs={setKeranjangs} />
           </Row>
         </Container>
       </div>
