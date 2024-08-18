@@ -1,5 +1,7 @@
 # Cashier-App
 
+![Website Preview](/KasirApp-React/public/preview.png)
+
 Cashier-App adalah aplikasi kasir berbasis web yang dibangun menggunakan React dan beberapa teknologi lainnya seperti API dan JSONPlaceholder. Aplikasi ini dirancang untuk membantu mengelola transaksi penjualan dengan mudah dan efisien.
 
 ## Fitur
