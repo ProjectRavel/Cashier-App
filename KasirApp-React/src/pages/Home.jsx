@@ -5,6 +5,7 @@ import { API_URL } from "../utils/constans";
 import axios from "axios";
 import Menus from "../components/Menus";
 import Swal from "sweetalert2";
+import './Home.css'
 
 function Home() {
   const [menus, setMenus] = useState([]);
@@ -142,7 +143,7 @@ function Home() {
                   <strong>Daftar Produk</strong>
                 </h4>
               </div>
-              <Row>
+              <Row className="testajah">
                 {menus &&
                   menus.map((menu) => (
                     <Menus

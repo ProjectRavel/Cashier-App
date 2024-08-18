@@ -118,7 +118,7 @@ function Hasil({ keranjangs, setKeranjangs }) {
         });
 
         const updatedKeranjangs = keranjangs.filter(
-          (item) => item.id!== keranjang.id
+          (item) => item.id !== keranjang.id
         );
         setKeranjangs(updatedKeranjangs);
       })
@@ -133,7 +133,7 @@ function Hasil({ keranjangs, setKeranjangs }) {
   );
 
   return (
-    <Col md={4} className="mt-2">
+    <Col sm={12} xl={3} className="mt-2">
       <Card>
         <Card.Header>
           <h4>
@@ -141,7 +141,7 @@ function Hasil({ keranjangs, setKeranjangs }) {
           </h4>
         </Card.Header>
         <Card.Body>
-          <ListGroup variant="flush">
+          <ListGroup variant="flush" className="keranjang-list">
             {keranjangs.length !== 0 ? (
               keranjangs.map((keranjang) => (
                 <ListGroup.Item

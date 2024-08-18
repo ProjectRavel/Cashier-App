@@ -1,0 +1,22 @@
+.testajah{
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.testajah::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .testajah::-webkit-scrollbar-track {
+    background: #ffffff; /* Warna track scrollbar */
+    border-radius: 4px;
+  }
+  
+  .testajah::-webkit-scrollbar-thumb {
+    background-color: #d5d5d5; /* Warna thumb scrollbar */
+    border-radius: 4px;
+  }
+  
+  .testajah::-webkit-scrollbar-thumb:hover {
+    background-color: #acacac; /* Warna thumb scrollbar saat di-hover */
+  }

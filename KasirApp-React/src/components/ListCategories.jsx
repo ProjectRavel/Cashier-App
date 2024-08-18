@@ -40,7 +40,7 @@ function ListCategories({ filterMenusByCategory, categoriesSelected }) {
   }, []);
 
   return (
-    <Col md={2} mt="2">
+    <Col sm={12} xl={2} mt="2">
       <h4 className="mb-4">
         <strong>Daftar Kategori</strong>
       </h4>

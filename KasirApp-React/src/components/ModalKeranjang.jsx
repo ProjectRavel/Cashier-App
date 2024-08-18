@@ -20,7 +20,7 @@ function ModalKeranjang({
       <Modal.Header closeButton>
         <Modal.Title>
           {keranjangDetails.product.nama}{" "}
-          <strong>(Rp.{FormatIDR(keranjangDetails.harga)})</strong>
+          <strong>(Rp.{FormatIDR(keranjangDetails.product.harga)})</strong>
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
@@ -31,7 +31,7 @@ function ModalKeranjang({
               <strong>Rp.{FormatIDR(keranjangDetails.total_harga)}</strong>
             </p>
           </Form.Group>
-          
+
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
             <Form.Label>Jumlah : </Form.Label> <br />
             <Button
@@ -73,12 +73,7 @@ function ModalKeranjang({
             </Button>
           </Form.Group>
         </Form>
-      </Modal.Body>
-      <Modal.Footer>
-        <Button variant="secondary" onClick={handleClose}>
-          Kembali
-        </Button>
-      </Modal.Footer>
+      </Modal.Body> 
     </Modal>
   );
 }
