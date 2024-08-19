@@ -5,6 +5,8 @@ import Home from "./pages/Home";
 import "./main.css";
 import Success from "./pages/Success";
 import Error from "./pages/Error";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 import { NavbarComponents } from "./components";
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
 
@@ -22,6 +24,14 @@ const router = createBrowserRouter([
   {
     path: "*", // Tangani semua rute yang tidak ditemukan
     element: <Error />,
+  },
+  {
+    path: "/login", 
+    element: <Login />,
+  },
+  {
+    path: "/register", 
+    element: <Register />,
   },
 ]);
 

@@ -12,15 +12,17 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Icon = ({ nama }) => {
-  if(nama === "All")
-    return <FontAwesomeIcon icon={faCompass} className="mx-2" />
+  if (nama === "All")
+    return <FontAwesomeIcon icon={faCompass} className="mx-2" />;
   if (nama === "Makanan")
     return <FontAwesomeIcon icon={faUtensilSpoon} className="mx-2" />;
   if (nama === "Minuman")
     return <FontAwesomeIcon icon={faCoffee} className="mx-2" />;
   if (nama === "Cemilan")
     return <FontAwesomeIcon icon={faCheese} className="mx-2" />;
-
+  if (nama === "Pakaian")
+    return <FontAwesomeIcon icon={faCheese} className="mx-2" />;
+  
   return <FontAwesomeIcon icon={faUtensilSpoon} className="mx-2" />;
 };
 
@@ -50,7 +52,11 @@ function ListCategories({ filterMenusByCategory, categoriesSelected }) {
             <ListGroup.Item
               key={category.id}
               onClick={() => filterMenusByCategory(category.nama)}
-              className={categoriesSelected === category.nama ? "listCategories selected" : "listCategories"}
+              className={
+                categoriesSelected === category.nama
+                  ? "listCategories selected"
+                  : "listCategories"
+              }
             >
               <h5 className="fs-6">
                 <Icon nama={category.nama} />

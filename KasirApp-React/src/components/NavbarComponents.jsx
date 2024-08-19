@@ -3,6 +3,11 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
 function NavbarComponents() {
+
+  const userName = JSON.parse(localStorage.getItem("user"))
+  
+  
+
   return (
     <Navbar variant="dark" expand="lg">
       <Container fluid>
@@ -17,6 +22,7 @@ function NavbarComponents() {
             navbarScroll
           >
             <Nav.Link href="/">Home</Nav.Link>
+            <p>{userName}</p>
           </Nav>
         </Navbar.Collapse>
       </Container>

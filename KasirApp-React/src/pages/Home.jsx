@@ -64,9 +64,11 @@ function Home() {
     }
   };
   
+//Keranjangs
+
   const updateKeranjangs = () => {
     axios
-      .get(API_URL + "keranjangs")
+      .get(API_URL + "keranjangs")  //API_URL + "user?nama=" + username + ".keranjangs"
       .then((response) => {
         const keranjang = response.data;
         setKeranjangs(keranjang);
@@ -87,8 +89,8 @@ function Home() {
         showConfirmButton: false,
       });
 
-      const response = await   axios
-      .get(API_URL + "keranjangs?product.id=" + value.id)
+      const response = await axios
+      .get(API_URL + "keranjangs?product.id=" + value.id) //API_URL + "user?nama=" + username + ".keranjangs", keranjang
       if (response.data.length === 0) {
         const keranjang = {
           jumlah: 1,
@@ -96,7 +98,7 @@ function Home() {
           product: value,
         };
 
-        await axios.post(API_URL + "keranjangs", keranjang)
+        await axios.post(API_URL + "keranjangs", keranjang) //API_URL + "user?nama=" + username + ".keranjangs", keranjang
         Swal.fire({
           title: "Sukses Masuk Keranjang!",
           text: `${keranjang.product.nama} Berhasil Ditambahkan!`,
