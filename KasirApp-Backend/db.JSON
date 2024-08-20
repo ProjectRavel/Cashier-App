@@ -41,6 +41,18 @@
       "nama": "cesyapridit",
       "password": "dsadsadas",
       "keranjangs": []
+    },
+    {
+      "id": "df8f",
+      "nama": "A",
+      "password": "123",
+      "keranjangs": []
+    },
+    {
+      "id": "210c",
+      "nama": "pian",
+      "password": "123",
+      "keranjangs": []
     }
   ],
   "categories": [
@@ -233,8 +245,9 @@
   ],
   "keranjangs": [
     {
-      "jumlah": 3,
-      "total_harga": 36000,
+      "id": "30d0",
+      "jumlah": 1,
+      "total_harga": 12000,
       "product": {
         "id": "3",
         "kode": "K-03",
@@ -246,11 +259,10 @@
           "id": 1,
           "nama": "Makanan"
         }
-      },
-      "id": "6942"
+      }
     },
     {
-      "id": "fba2",
+      "id": "0dd8",
       "jumlah": 1,
       "total_harga": 14000,
       "product": {
@@ -267,24 +279,24 @@
       }
     },
     {
-      "id": "7864",
-      "jumlah": 1,
-      "total_harga": 16000,
+      "jumlah": 2,
+      "total_harga": 20000,
       "product": {
-        "id": "1",
-        "kode": "K-01",
-        "nama": "Sate Ayam",
-        "harga": 16000,
+        "id": "6",
+        "kode": "K-06",
+        "nama": "Bakso",
+        "harga": 10000,
         "is_ready": true,
-        "gambar": "sate-ayam.jpg",
+        "gambar": "bakso.jpg",
         "category": {
           "id": 1,
           "nama": "Makanan"
         }
-      }
+      },
+      "id": "8bf5"
     },
     {
-      "id": "566a",
+      "id": "8922",
       "jumlah": 1,
       "total_harga": 18000,
       "product": {
@@ -297,74 +309,6 @@
         "category": {
           "id": 1,
           "nama": "Makanan"
-        }
-      }
-    },
-    {
-      "id": "d6f8",
-      "jumlah": 1,
-      "total_harga": 10000,
-      "product": {
-        "id": "6",
-        "kode": "K-06",
-        "nama": "Bakso",
-        "harga": 10000,
-        "is_ready": true,
-        "gambar": "bakso.jpg",
-        "category": {
-          "id": 1,
-          "nama": "Makanan"
-        }
-      }
-    },
-    {
-      "id": "aed8",
-      "jumlah": 1,
-      "total_harga": 13000,
-      "product": {
-        "id": "5",
-        "kode": "K-05",
-        "nama": "Mie Goreng",
-        "harga": 13000,
-        "is_ready": true,
-        "gambar": "mie-goreng.jpg",
-        "category": {
-          "id": 1,
-          "nama": "Makanan"
-        }
-      }
-    },
-    {
-      "id": "41e6",
-      "jumlah": 1,
-      "total_harga": 5000,
-      "product": {
-        "id": "9",
-        "kode": "K-09",
-        "nama": "Kentang Goreng",
-        "harga": 5000,
-        "is_ready": true,
-        "gambar": "kentang-goreng.jpg",
-        "category": {
-          "id": 3,
-          "nama": "Cemilan"
-        }
-      }
-    },
-    {
-      "id": "da5f",
-      "jumlah": 1,
-      "total_harga": 5000,
-      "product": {
-        "id": "8",
-        "kode": "K-08",
-        "nama": "Pangsit 6 pcs",
-        "harga": 5000,
-        "is_ready": true,
-        "gambar": "pangsit.jpg",
-        "category": {
-          "id": 3,
-          "nama": "Cemilan"
         }
       }
     }

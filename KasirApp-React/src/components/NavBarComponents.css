@@ -1,0 +1,41 @@
+/* NavbarComponents.css */
+.navbar-user-name {
+    font-size: 1rem;
+    /* Ukuran font untuk nama pengguna */
+    color: #f8f9fa;
+    /* Warna teks yang kontras dengan latar belakang navbar */
+}
+
+.navbar {
+    background-color: #222831;
+    /* Warna latar belakang navbar */
+}
+
+.navbar .navbar-brand {
+    font-size: 1.25rem;
+    /* Ukuran font untuk brand */
+}
+
+.navbar .nav-link {
+    color: #f8f9fa;
+    /* Warna teks untuk link */
+}
+
+.navbar .nav-link:hover {
+    color: #76ABAE;
+    /* Warna hover untuk link */
+}
+
+.navbar .btn-outline-light {
+    color: #f8f9fa;
+    /* Warna teks untuk tombol logout */
+    border-color: #f8f9fa;
+    /* Warna border untuk tombol logout */
+}
+
+.navbar .btn-outline-light:hover {
+    background-color: #76ABAE;
+    /* Warna latar belakang tombol logout saat hover */
+    border-color: #76ABAE;
+    /* Warna border tombol logout saat hover */
+}
