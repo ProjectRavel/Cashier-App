@@ -7,6 +7,7 @@ import axios from "axios";
 import { API_URL } from "../utils/constans";
 
 function TotalBayar({ totalBayar, keranjangs }) {
+  console.log(keranjangs);
   const submitTotalBayar = async (totalBayarPembayaran, keranjangsItem) => {
   Swal.fire({
     title: "Konfirmasi Pembayaran",

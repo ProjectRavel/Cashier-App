@@ -7,37 +7,37 @@ import Success from "./pages/Success";
 import Error from "./pages/Error";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import { NavbarComponents } from "./components";
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
+import PrivateRoute from "./components/PrivateRoot";
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Home />,
+    path: "*",
+    element: <Error />,
+  },
+  {
+    path: "/Home",
+    element: <PrivateRoute component={Home} />,
     errorElement: <Error />,
   },
   {
     path: "/sukses",
-    element: <Success />,
+    element: <PrivateRoute component={Success} />, // Gunakan PrivateRoute untuk halaman Sukses
     errorElement: <Error />,
   },
   {
-    path: "*", // Tangani semua rute yang tidak ditemukan
-    element: <Error />,
-  },
-  {
-    path: "/login", 
+    path: "/login",
     element: <Login />,
   },
   {
-    path: "/register", 
+    path: "/register",
     element: <Register />,
   },
 ]);
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <NavbarComponents />
+
     <RouterProvider router={router} />
   </React.StrictMode>
 );

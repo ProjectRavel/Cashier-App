@@ -1,41 +1,41 @@
-/* NavbarComponents.css */
+.navbar-custom {
+    background-color: #0066cb;
+    /* Dark background for the navbar */
+}
+
 .navbar-user-name {
     font-size: 1rem;
-    /* Ukuran font untuk nama pengguna */
-    color: #f8f9fa;
-    /* Warna teks yang kontras dengan latar belakang navbar */
 }
 
-.navbar {
-    background-color: #222831;
-    /* Warna latar belakang navbar */
+.navbar-custom .navbar-brand {
+    color: #ffffff;
 }
 
-.navbar .navbar-brand {
-    font-size: 1.25rem;
-    /* Ukuran font untuk brand */
+.navbar-custom .navbar-brand strong {
+    color: #00bfff;
+    /* Light blue color for emphasis */
 }
 
-.navbar .nav-link {
-    color: #f8f9fa;
-    /* Warna teks untuk link */
+.navbar-custom .navbar-nav .nav-link {
+    color: #ffffff;
 }
 
-.navbar .nav-link:hover {
-    color: #76ABAE;
-    /* Warna hover untuk link */
+.navbar-custom .navbar-nav .nav-link:hover {
+    color: #00bfff;
 }
 
-.navbar .btn-outline-light {
-    color: #f8f9fa;
-    /* Warna teks untuk tombol logout */
-    border-color: #f8f9fa;
-    /* Warna border untuk tombol logout */
+.navbar-custom .btn-outline-light {
+    border-color: #00bfff;
+    /* Light blue border */
+    color: #ffffff;
+    /* White text */
 }
 
-.navbar .btn-outline-light:hover {
-    background-color: #76ABAE;
-    /* Warna latar belakang tombol logout saat hover */
-    border-color: #76ABAE;
-    /* Warna border tombol logout saat hover */
+.navbar-custom .btn-outline-light:hover {
+    background-color: #000000;
+    /* Light blue background on hover */
+    color: #ffffff;
+    /* White text on hover */
+
+    border-color: #d3f4ff;
 }

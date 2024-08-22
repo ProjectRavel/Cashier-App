@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { API_URL } from "../utils/constans";
+import "./login.css";
 
 function Login() {
   const [nama, setNama] = useState("");
@@ -23,10 +24,10 @@ function Login() {
 
       if (user) {
         // Redirect atau simpan sesi pengguna di sini
-        console.log(users)
-        console.log(user)
+        console.log(users);
+        console.log(user);
         localStorage.setItem("user", JSON.stringify(user.nama));
-        window.location.href = "/";
+        window.location.href = "/Home";
       } else {
         // Gagal login
         setError("Nama atau password salah.");
@@ -37,31 +38,54 @@ function Login() {
     }
   };
 
+  const toRegister = () => {
+    window.location.href = "/Register";
+  };
+
   return (
-    <div>
-      <h1>Login</h1>
-      <form onSubmit={handleLogin}>
-        <div>
-          <label>Nama:</label>
-          <input
-            type="text"
-            value={nama}
-            onChange={(e) => setNama(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        {error && <p>{error}</p>}
-        <button type="submit">Login</button>
-      </form>
+    <div className="container-fluid d-flex justify-content-center align-items-center min-vh-100">
+      <div className="col-md-4 border-1 border p-4 rounded-2 shadow-lg">
+        <img src="/logo.png" alt="Logo" className="mb-4 mx-auto d-flex" width={50}/>
+        <h1 className="text-center mb-4">Login</h1>
+        <form onSubmit={handleLogin}>
+          <div className="form-group mb-3">
+            <label htmlFor="nama">Nama:</label>
+            <input
+              type="text"
+              id="nama"
+              className="form-control"
+              value={nama}
+              onChange={(e) => setNama(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-group mb-3">
+            <label htmlFor="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              className="form-control"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          {error && <p className="text-danger">{error}</p>}
+          <button type="submit" className="btn btn-primary w-100">
+            Login
+          </button>
+          <p className="mt-3 text-center">
+            Belum Punya akun?{" "}
+            <span
+              className="text-primary fw-bold register-button"
+              onClick={toRegister}
+            >
+              Register
+            </span>{" "}
+            aja dulu!
+          </p>
+        </form>
+      </div>
     </div>
   );
 }

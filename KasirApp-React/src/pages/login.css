@@ -1,0 +1,9 @@
+.register-button{
+    animation: ease-in-out;
+    animation-duration: 0.2s;
+}
+
+.register-button:hover{
+    cursor: pointer;
+    opacity: 90%;
+}

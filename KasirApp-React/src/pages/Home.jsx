@@ -5,7 +5,7 @@ import { API_URL } from "../utils/constans";
 import axios from "axios";
 import Menus from "../components/Menus";
 import Swal from "sweetalert2";
-import './Home.css'
+import "./Home.css";
 
 function Home() {
   const [menus, setMenus] = useState([]);
@@ -13,7 +13,6 @@ function Home() {
   const [keranjangs, setKeranjangs] = useState([]);
 
   useEffect(() => {
-    <NavbarComponents />;
     axios
       .get(API_URL + "products")
       .then((response) => {
@@ -46,12 +45,12 @@ function Home() {
         .then((response) => {
           const menus = response.data;
           setMenus(menus);
-          console.log(menus)
+          console.log(menus);
         })
         .catch((error) => {
           console.error("Error fetching data: ", error);
         });
-    }else{
+    } else {
       axios
         .get(API_URL + "products?category.nama=" + category)
         .then((response) => {
@@ -63,12 +62,12 @@ function Home() {
         });
     }
   };
-  
-//Keranjangs
+
+  //Keranjangs
 
   const updateKeranjangs = () => {
     axios
-      .get(API_URL + "keranjangs")  //API_URL + "user?nama=" + username + ".keranjangs"
+      .get(API_URL + "keranjangs") //API_URL + "user?nama=" + username + ".keranjangs"
       .then((response) => {
         const keranjang = response.data;
         setKeranjangs(keranjang);
@@ -80,7 +79,7 @@ function Home() {
 
   // Di dalam masukkanKeKeranjang
   const masukkanKeKeranjang = async (value) => {
-    try{
+    try {
       Swal.fire({
         title: "Menambahkan ke Keranjang...",
         text: "Mohon tunggu beberapa saat.",
@@ -89,8 +88,9 @@ function Home() {
         showConfirmButton: false,
       });
 
-      const response = await axios
-      .get(API_URL + "keranjangs?product.id=" + value.id) //API_URL + "user?nama=" + username + ".keranjangs", keranjang
+      const response = await axios.get(
+        API_URL + "keranjangs?product.id=" + value.id
+      ); //API_URL + "user?nama=" + username + ".keranjangs", keranjang
       if (response.data.length === 0) {
         const keranjang = {
           jumlah: 1,
@@ -98,40 +98,44 @@ function Home() {
           product: value,
         };
 
-        await axios.post(API_URL + "keranjangs", keranjang) //API_URL + "user?nama=" + username + ".keranjangs", keranjang
+        await axios.post(API_URL + "keranjangs", keranjang); //API_URL + "user?nama=" + username + ".keranjangs", keranjang
         Swal.fire({
           title: "Sukses Masuk Keranjang!",
           text: `${keranjang.product.nama} Berhasil Ditambahkan!`,
           icon: "success",
         });
-    } else {
-          const keranjang = {
-            jumlah: response.data[0].jumlah + 1,
-            total_harga: response.data[0].total_harga + value.harga,
-            product: value,
-          };
+      } else {
+        const keranjang = {
+          jumlah: response.data[0].jumlah + 1,
+          total_harga: response.data[0].total_harga + value.harga,
+          product: value,
+        };
 
-          await axios.put(API_URL + "keranjangs/" + response.data[0].id, keranjang)
-            
-            Swal.fire({
-                title: "Sukses Masuk Keranjang!",
-                text: `${keranjang.product.nama} Berhasil Ditambahkan!`,
-                icon: "success",
-              });
-            }
-            updateKeranjangs();
-          }catch (e) {
-            Swal.fire({
-              title: "Gagal Menambahkan ke Keranjang!",
-              text: "Terdapat kesalahan saat menambahkan produk ke keranjang. Silahkan coba lagi.",
-              icon: "error",
-              confirmButtonText: "Coba Lagi",
-            });
-              console.error("Error fetching data: ", e);
-          }
-        }
+        await axios.put(
+          API_URL + "keranjangs/" + response.data[0].id,
+          keranjang
+        );
+
+        Swal.fire({
+          title: "Sukses Masuk Keranjang!",
+          text: `${keranjang.product.nama} Berhasil Ditambahkan!`,
+          icon: "success",
+        });
+      }
+      updateKeranjangs();
+    } catch (e) {
+      Swal.fire({
+        title: "Gagal Menambahkan ke Keranjang!",
+        text: "Terdapat kesalahan saat menambahkan produk ke keranjang. Silahkan coba lagi.",
+        icon: "error",
+        confirmButtonText: "Coba Lagi",
+      });
+      console.error("Error fetching data: ", e);
+    }
+  };
   return (
     <>
+      <NavbarComponents />;
       <div className="mt-3">
         <Container fluid>
           <Row>

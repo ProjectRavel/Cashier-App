@@ -8,7 +8,7 @@ function Error() {
           <h1 className="display-1 fw-bold">Oops!</h1>
           <p className="lead">Sorry, an unexpected 404 has occurred.</p>
           <p className="display-4">404</p>
-          <Button variant="primary" href="/" className="mt-3">Go Back to Home</Button>
+          <Button variant="primary" href="/home" className="mt-3">Go Back to Home</Button>
         </Col>
       </Row>
     </Container>

@@ -1,12 +1,13 @@
 import { useState } from "react";
 import axios from "axios";
 import { API_URL } from "../utils/constans"; // Ganti dengan URL API Anda
+import Swal from "sweetalert2";
 
 function Register() {
   const [nama, setNama] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
+  const [success,setSuccess] = useState("");
   const [keranjangs] = useState([]);
 
   const handleRegister = async (e) => {
@@ -37,45 +38,72 @@ function Register() {
         setNama("");
         setPassword("");
 
+        Swal.fire({
+          title: "Pendaftaran Berhasil!",
+          text: "Tinggal Login deh!",
+          icon: "success",
+        });
+
         console.log("berhasil anjir");
       } else {
-        setError("Nama sudah dipakai!!!");
+        setError("Nama dah dipake!");
         return;
       }
-
-      // Mengirim data pendaftaran ke API
     } catch (err) {
-      // Jika terjadi kesalahan
+      Swal.fire({
+        title: "Nama Sudah Pernah Terpakai",
+        text: "Namanya cari yang lain gih!",
+        icon: "error",
+      });
       setError("Terjadi kesalahan saat pendaftaran.");
       console.error("Error register: ", err);
     }
   };
 
+  const toLogin = () => {
+    window.location.href = "/login";
+  };
+
   return (
-    <div>
-      <h1>Register</h1>
+    <div className="container mt-5" style={{ maxWidth: "400px" }}>
+      <h1 className="text-center mb-4">Register</h1>
       <form onSubmit={handleRegister}>
-        <div>
-          <label>Nama:</label>
+        <div className="form-group mb-3">
+          <label htmlFor="nama">Nama:</label>
           <input
             type="text"
+            id="nama"
+            className="form-control"
             value={nama}
             onChange={(e) => setNama(e.target.value)}
             required
           />
         </div>
-        <div>
-          <label>Password:</label>
+        <div className="form-group mb-3">
+          <label htmlFor="password">Password:</label>
           <input
             type="password"
+            id="password"
+            className="form-control"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
         </div>
-        {error && <p style={{ color: "red" }}>{error}</p>}
-        {success && <p style={{ color: "green" }}>{success}</p>}
-        <button type="submit">Register</button>
+        {error && <p className="text-danger">{error}</p>}
+        <button type="submit" className="btn btn-primary w-100">
+          Register
+        </button>
+        <p>
+          Udeh punya akun?{" "}
+          <span
+            className="text-primary fw-bold register-button"
+            onClick={toLogin}
+          >
+            Login
+          </span>{" "}
+          Ayo Sini!
+        </p>
       </form>
     </div>
   );

@@ -14,7 +14,7 @@ function Success() {
           <p className="success-message">
             Anda telah berhasil melakukan tindakan.
           </p>
-          <Button variant="primary" href="/">
+          <Button variant="primary" href="/home">
             Kembali ke Beranda
           </Button>
         </Col>
