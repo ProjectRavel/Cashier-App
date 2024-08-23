@@ -12,6 +12,11 @@ import PrivateRoute from "./components/PrivateRoot";
 
 const router = createBrowserRouter([
   {
+    path: "/",
+    element: <Home />, // Gunakan Home sebagai default route
+    errorElement: <Error />, // Gunakan Error sebagai default error element
+  },
+  {
     path: "*",
     element: <Error />,
   },

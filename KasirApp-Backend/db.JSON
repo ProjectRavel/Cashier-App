@@ -5,6 +5,42 @@
       "nama": "i",
       "password": "1",
       "keranjangs": []
+    },
+    {
+      "id": "a484",
+      "nama": "marthin",
+      "password": "123",
+      "keranjangs": []
+    },
+    {
+      "id": "8ebd",
+      "nama": "feb",
+      "password": "123",
+      "keranjangs": []
+    },
+    {
+      "id": "b300",
+      "nama": "pian",
+      "password": "123",
+      "keranjangs": []
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "nama": "All"
+    },
+    {
+      "id": 2,
+      "nama": "Makanan"
+    },
+    {
+      "id": 3,
+      "nama": "Minuman"
+    },
+    {
+      "id": 4,
+      "nama": "Cemilan"
     }
   ],
   "products": [
@@ -177,15 +213,51 @@
       }
     }
   ],
-  "keranjangs": [],
+  "keranjangs": [
+    {
+      "jumlah": 3,
+      "total_harga": 48000,
+      "product": {
+        "id": "1",
+        "kode": "K-01",
+        "nama": "Sate Ayam",
+        "harga": 16000,
+        "is_ready": true,
+        "gambar": "sate-ayam.jpg",
+        "category": {
+          "id": 1,
+          "nama": "Makanan"
+        }
+      },
+      "id": "4902"
+    }
+  ],
   "pesanans": [
     {
-      "id": "9df2",
-      "total_pembayaran": 84000,
+      "id": "f85b",
+      "total_pembayaran": 76000,
       "menus": [
         {
-          "jumlah": 2,
-          "total_harga": 28000,
+          "id": "0971",
+          "jumlah": 1,
+          "total_harga": 12000,
+          "product": {
+            "id": "3",
+            "kode": "K-03",
+            "nama": "Nasi Rames",
+            "harga": 12000,
+            "is_ready": true,
+            "gambar": "nasi-rames.jpg",
+            "category": {
+              "id": 1,
+              "nama": "Makanan"
+            }
+          }
+        },
+        {
+          "id": "c441",
+          "jumlah": 1,
+          "total_harga": 14000,
           "product": {
             "id": "2",
             "kode": "K-02",
@@ -197,8 +269,7 @@
               "id": 1,
               "nama": "Makanan"
             }
-          },
-          "id": "118f"
+          }
         },
         {
           "jumlah": 2,
@@ -215,24 +286,24 @@
               "nama": "Makanan"
             }
           },
-          "id": "3e4f"
+          "id": "3ad4"
         },
         {
-          "jumlah": 2,
-          "total_harga": 24000,
+          "id": "3617",
+          "jumlah": 1,
+          "total_harga": 18000,
           "product": {
-            "id": "3",
-            "kode": "K-03",
-            "nama": "Nasi Rames",
-            "harga": 12000,
+            "id": "4",
+            "kode": "K-04",
+            "nama": "Lontong Opor Ayam",
+            "harga": 18000,
             "is_ready": true,
-            "gambar": "nasi-rames.jpg",
+            "gambar": "lontong-opor-ayam.jpg",
             "category": {
               "id": 1,
               "nama": "Makanan"
             }
-          },
-          "id": "054f"
+          }
         }
       ]
     }
