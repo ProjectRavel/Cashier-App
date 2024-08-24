@@ -2,26 +2,26 @@
 
 ![Website Preview](/KasirApp-React/public/preview.png)
 
-Cashier-App adalah aplikasi kasir berbasis web yang dibangun menggunakan React dan beberapa teknologi lainnya seperti API dan JSONPlaceholder. Aplikasi ini dirancang untuk membantu mengelola transaksi penjualan dengan mudah dan efisien.
+Cashier-App is a web-based cashier application built using React and other technologies such as API and JSONPlaceholder. The application is designed to help manage sales transactions easily and efficiently.
 
-## Fitur
+## Feature
 
-- **ReactJS**: Dibangun menggunakan React untuk UI yang responsif dan interaktif.
-- **API Integration**: Menggunakan API untuk mendapatkan dan mengelola data produk dan transaksi.
-- **JSONPlaceholder**: Menyediakan data dummy untuk pengujian dan pengembangan.
-- **Dynamic UI**: Tampilan yang dapat diperbarui secara dinamis sesuai dengan data yang diambil dari API.
+- **ReactJS**: Built with React for a responsive and interactive UI.
+- **API Integration**: Uses APIs to fetch and manage product and transaction data.
+- **JSONPlaceholder**: Provides dummy data for testing and development.
+ -**Dynamic UI**: A dynamically updatable interface based on data retrieved from the API.
 
-## Instalasi
+## Installation
 
-Pastikan Anda sudah menginstall [Node.js](https://nodejs.org/) dan [npm](https://www.npmjs.com/) di sistem Anda.
+Make sure you have installed [Node.js](https://nodejs.org/) dan [npm](https://www.npmjs.com/) on your system.
 
-1. **Clone repository ini:**
+1. **Clone this Repository:**
 
 ```bash
 git clone https://github.com/ProjectRavel/Cashier-App.git
 ```
 
-2. **Masuk ke direktori frontend:**
+2. **Navigate to the frontend directory:**
 
 ```bash
 cd KasirApp-react
@@ -33,42 +33,41 @@ cd KasirApp-react
 npm install
 ```
 
-4. **Jalankan aplikasi:**
+4. **Run the application:**
 
 ```bash
 npm run dev
 ```
 
-Aplikasi ini akan berjalan pada `http://localhost:5173` atau port lain yang ditentukan oleh Vite.
+The application will run on `http://localhost:5173` or another port specified by Vite.
 
-5. **Jalankan JSONPlaceholder (Backend):**
-   Buka terminal baru dan masuk ke direktori backend:
-
+5. **Run JSONPlaceholder (Backend): Open a new terminal and navigate to the backend directory:**
+6. 
 ```bash
 cd ../kasirapp-backend
 ```
 
-Setelah itu, jalankan placeholder:
+Then, run the placeholder:
 
 ```bash
 json-server --watch db.json --port 5000
 ```
 
-JSONPlaceholder akan berjalan pada `http://localhost:5000`.
+JSONPlaceholder will run on `http://localhost:5000`.
 
-## Penggunaan
+## Usage
 
-1. **Akses Aplikasi:**
-   Buka browser dan akses `http://localhost:5173` untuk membuka aplikasi kasir.
+1. **Access the Application:**
+    Open a browser and go to http://localhost:5173 to access the cashier application.
 
-2. **Interaksi dengan Backend:**
-   Semua data produk dan transaksi akan diambil dari API yang disediakan oleh JSONPlaceholder di `http://localhost:5000`.
+2. **Interact with the Backend:**
+   All product and transaction data will be fetched from the API provided by JSONPlaceholder at `http://localhost:5000`.
 
-## Struktur Proyek
+## Project Structure
 
-- **KasirApp-react**: Direktori untuk kode frontend (React).
-- **kasirapp-backend**: Direktori untuk JSONPlaceholder backend.
+- **KasirApp-react**: Directory for frontend code (React).
+- **kasirapp-backend**: Directory for the JSONPlaceholder backend.
 
 ## Kontribusi
 
-Kontribusi sangat diterima! Silakan fork repository ini dan buat pull request untuk perbaikan atau penambahan fitur.
+Contributions are very welcome! Please fork this repository and create a pull request for any improvements or feature additions.
