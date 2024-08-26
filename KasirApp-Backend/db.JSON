@@ -23,222 +23,804 @@
       "nama": "pian",
       "password": "123",
       "keranjangs": []
+    },
+    {
+      "id": "3916",
+      "nama": "Nadhira Rafani Ghifari",
+      "password": "123",
+      "keranjangs": []
     }
   ],
   "categories": [
     {
-      "id": 1,
+      "id": "1",
       "nama": "All"
     },
     {
-      "id": 2,
-      "nama": "Makanan"
+      "id": "2",
+      "nama": "Elektronik"
     },
     {
-      "id": 3,
-      "nama": "Minuman"
+      "id": "3",
+      "nama": "Pakaian"
     },
     {
-      "id": 4,
-      "nama": "Cemilan"
+      "id": "4",
+      "nama": "Kecantikan"
+    },
+    {
+      "id": "5",
+      "nama": "Peralatan Rumah Tangga"
+    },
+    {
+      "id": "6",
+      "nama": "Buku"
     }
   ],
   "products": [
     {
       "id": "1",
-      "kode": "K-01",
-      "nama": "Sate Ayam",
-      "harga": 16000,
+      "kode": "E-01",
+      "nama": "Laptop Gaming",
+      "harga": 15000000,
       "is_ready": true,
-      "gambar": "sate-ayam.jpg",
+      "gambar": "laptop-gaming.jpg",
       "category": {
-        "id": 1,
-        "nama": "Makanan"
+        "id": 2,
+        "nama": "Elektronik"
       }
     },
     {
       "id": "2",
-      "kode": "K-02",
-      "nama": "Nasi Goreng Telur",
-      "harga": 14000,
+      "kode": "E-02",
+      "nama": "Smartphone Android",
+      "harga": 5000000,
       "is_ready": true,
-      "gambar": "nasi-goreng-telor.jpg",
+      "gambar": "smartphone-android.jpg",
       "category": {
-        "id": 1,
-        "nama": "Makanan"
+        "id": 2,
+        "nama": "Elektronik"
       }
     },
     {
       "id": "3",
-      "kode": "K-03",
-      "nama": "Nasi Rames",
-      "harga": 12000,
+      "kode": "E-03",
+      "nama": "Tablet",
+      "harga": 3000000,
       "is_ready": true,
-      "gambar": "nasi-rames.jpg",
+      "gambar": "tablet.jpg",
       "category": {
-        "id": 1,
-        "nama": "Makanan"
+        "id": 2,
+        "nama": "Elektronik"
       }
     },
     {
       "id": "4",
-      "kode": "K-04",
-      "nama": "Lontong Opor Ayam",
-      "harga": 18000,
+      "kode": "E-04",
+      "nama": "Smartwatch",
+      "harga": 2000000,
       "is_ready": true,
-      "gambar": "lontong-opor-ayam.jpg",
+      "gambar": "smartwatch.jpg",
       "category": {
-        "id": 1,
-        "nama": "Makanan"
+        "id": 2,
+        "nama": "Elektronik"
       }
     },
     {
       "id": "5",
-      "kode": "K-05",
-      "nama": "Mie Goreng",
-      "harga": 13000,
+      "kode": "E-05",
+      "nama": "Headphone Wireless",
+      "harga": 1000000,
       "is_ready": true,
-      "gambar": "mie-goreng.jpg",
+      "gambar": "headphone-wireless.jpg",
       "category": {
-        "id": 1,
-        "nama": "Makanan"
+        "id": 2,
+        "nama": "Elektronik"
       }
     },
     {
       "id": "6",
-      "kode": "K-06",
-      "nama": "Bakso",
-      "harga": 10000,
+      "kode": "P-01",
+      "nama": "Kaos Polos",
+      "harga": 50000,
       "is_ready": true,
-      "gambar": "bakso.jpg",
+      "gambar": "kaos-polos.jpg",
       "category": {
-        "id": 1,
-        "nama": "Makanan"
+        "id": 3,
+        "nama": "Pakaian"
       }
     },
     {
       "id": "7",
-      "kode": "K-07",
-      "nama": "Mie Ayam Bakso",
-      "harga": 14000,
+      "kode": "P-02",
+      "nama": "Jaket Hoodie",
+      "harga": 200000,
       "is_ready": true,
-      "gambar": "mie-ayam-bakso.jpg",
+      "gambar": "jaket-hoodie.jpg",
       "category": {
-        "id": 1,
-        "nama": "Makanan"
+        "id": 3,
+        "nama": "Pakaian"
       }
     },
     {
       "id": "8",
-      "kode": "K-08",
-      "nama": "Pangsit 6 pcs",
-      "harga": 5000,
+      "kode": "P-03",
+      "nama": "Jeans Skinny",
+      "harga": 300000,
       "is_ready": true,
-      "gambar": "pangsit.jpg",
+      "gambar": "jeans-skinny.jpg",
       "category": {
         "id": 3,
-        "nama": "Cemilan"
+        "nama": "Pakaian"
       }
     },
     {
       "id": "9",
-      "kode": "K-09",
-      "nama": "Kentang Goreng",
-      "harga": 5000,
+      "kode": "P-04",
+      "nama": "Sepatu Sneakers",
+      "harga": 400000,
       "is_ready": true,
-      "gambar": "kentang-goreng.jpg",
+      "gambar": "sepatu-sneakers.jpg",
       "category": {
         "id": 3,
-        "nama": "Cemilan"
+        "nama": "Pakaian"
       }
     },
     {
       "id": "10",
-      "kode": "K-010",
-      "nama": "Cheese Burger",
-      "harga": 15000,
+      "kode": "P-05",
+      "nama": "Kemeja Flanel",
+      "harga": 150000,
       "is_ready": true,
-      "gambar": "cheese-burger.jpg",
+      "gambar": "kemeja-flanel.jpg",
       "category": {
         "id": 3,
-        "nama": "Cemilan"
+        "nama": "Pakaian"
       }
     },
     {
       "id": "11",
-      "kode": "K-011",
-      "nama": "Coffe Late",
-      "harga": 15000,
+      "kode": "K-01",
+      "nama": "Lipstik Matte",
+      "harga": 75000,
       "is_ready": true,
-      "gambar": "coffe-late.jpg",
+      "gambar": "lipstik-matte.jpg",
       "category": {
-        "id": 2,
-        "nama": "Minuman"
+        "id": 4,
+        "nama": "Kecantikan"
       }
     },
     {
       "id": "12",
-      "kode": "K-012",
-      "nama": "Es Jeruk",
-      "harga": 7000,
+      "kode": "K-02",
+      "nama": "Foundation Cair",
+      "harga": 150000,
       "is_ready": true,
-      "gambar": "es-jeruk.jpg",
+      "gambar": "foundation-cair.jpg",
       "category": {
-        "id": 2,
-        "nama": "Minuman"
+        "id": 4,
+        "nama": "Kecantikan"
       }
     },
     {
       "id": "13",
-      "kode": "K-013",
-      "nama": "Es Teh",
-      "harga": 5000,
+      "kode": "K-03",
+      "nama": "Masker Wajah",
+      "harga": 50000,
       "is_ready": true,
-      "gambar": "es-teh.jpg",
+      "gambar": "masker-wajah.jpg",
       "category": {
-        "id": 2,
-        "nama": "Minuman"
+        "id": 4,
+        "nama": "Kecantikan"
       }
     },
     {
       "id": "14",
-      "kode": "K-014",
-      "nama": "Teh Hangat",
-      "harga": 3000,
+      "kode": "K-04",
+      "nama": "Eyebrow Pencil",
+      "harga": 40000,
       "is_ready": true,
-      "gambar": "teh-hangat.jpg",
+      "gambar": "eyebrow-pencil.jpg",
+      "category": {
+        "id": 4,
+        "nama": "Kecantikan"
+      }
+    },
+    {
+      "id": "15",
+      "kode": "K-05",
+      "nama": "Blush On",
+      "harga": 60000,
+      "is_ready": true,
+      "gambar": "blush-on.jpg",
+      "category": {
+        "id": 4,
+        "nama": "Kecantikan"
+      }
+    },
+    {
+      "id": "16",
+      "kode": "R-01",
+      "nama": "Blender",
+      "harga": 500000,
+      "is_ready": true,
+      "gambar": "blender.jpg",
+      "category": {
+        "id": 5,
+        "nama": "Peralatan Rumah Tangga"
+      }
+    },
+    {
+      "id": "17",
+      "kode": "R-02",
+      "nama": "Setrika Listrik",
+      "harga": 250000,
+      "is_ready": true,
+      "gambar": "setrika-listrik.jpg",
+      "category": {
+        "id": 5,
+        "nama": "Peralatan Rumah Tangga"
+      }
+    },
+    {
+      "id": "18",
+      "kode": "R-03",
+      "nama": "Vacuum Cleaner",
+      "harga": 800000,
+      "is_ready": true,
+      "gambar": "vacuum-cleaner.jpg",
+      "category": {
+        "id": 5,
+        "nama": "Peralatan Rumah Tangga"
+      }
+    },
+    {
+      "id": "19",
+      "kode": "R-04",
+      "nama": "Rice Cooker",
+      "harga": 350000,
+      "is_ready": true,
+      "gambar": "rice-cooker.jpg",
+      "category": {
+        "id": 5,
+        "nama": "Peralatan Rumah Tangga"
+      }
+    },
+    {
+      "id": "20",
+      "kode": "R-05",
+      "nama": "Kompor Gas",
+      "harga": 400000,
+      "is_ready": true,
+      "gambar": "kompor-gas.jpg",
+      "category": {
+        "id": 5,
+        "nama": "Peralatan Rumah Tangga"
+      }
+    },
+    {
+      "id": "21",
+      "kode": "B-01",
+      "nama": "Buku Novel Fiksi",
+      "harga": 100000,
+      "is_ready": true,
+      "gambar": "buku-novel.jpg",
+      "category": {
+        "id": 6,
+        "nama": "Buku"
+      }
+    },
+    {
+      "id": "22",
+      "kode": "B-02",
+      "nama": "Buku Motivasi",
+      "harga": 75000,
+      "is_ready": true,
+      "gambar": "buku-motivasi.jpg",
+      "category": {
+        "id": 6,
+        "nama": "Buku"
+      }
+    },
+    {
+      "id": "23",
+      "kode": "B-03",
+      "nama": "Buku Pelajaran Matematika",
+      "harga": 80000,
+      "is_ready": true,
+      "gambar": "buku-matematika.jpg",
+      "category": {
+        "id": 6,
+        "nama": "Buku"
+      }
+    },
+    {
+      "id": "24",
+      "kode": "B-04",
+      "nama": "Buku Resep Masakan",
+      "harga": 50000,
+      "is_ready": true,
+      "gambar": "buku-resep.jpg",
+      "category": {
+        "id": 6,
+        "nama": "Buku"
+      }
+    },
+    {
+      "id": "25",
+      "kode": "B-05",
+      "nama": "Buku Sejarah Dunia",
+      "harga": 90000,
+      "is_ready": true,
+      "gambar": "buku-sejarah.jpg",
+      "category": {
+        "id": 6,
+        "nama": "Buku"
+      }
+    },
+    {
+      "id": "26",
+      "kode": "E-06",
+      "nama": "Kamera DSLR",
+      "harga": 7000000,
+      "is_ready": true,
+      "gambar": "kamera-dslr.jpg",
       "category": {
         "id": 2,
-        "nama": "Minuman"
+        "nama": "Elektronik"
+      }
+    },
+    {
+      "id": "27",
+      "kode": "E-07",
+      "nama": "Printer Wireless",
+      "harga": 1500000,
+      "is_ready": true,
+      "gambar": "printer-wireless.jpg",
+      "category": {
+        "id": 2,
+        "nama": "Elektronik"
+      }
+    },
+    {
+      "id": "28",
+      "kode": "E-08",
+      "nama": "Monitor 4K",
+      "harga": 3000000,
+      "is_ready": true,
+      "gambar": "monitor-4k.jpg",
+      "category": {
+        "id": 2,
+        "nama": "Elektronik"
+      }
+    },
+    {
+      "id": "29",
+      "kode": "E-09",
+      "nama": "Speaker Bluetooth",
+      "harga": 800000,
+      "is_ready": true,
+      "gambar": "speaker-bluetooth.jpg",
+      "category": {
+        "id": 2,
+        "nama": "Elektronik"
+      }
+    },
+    {
+      "id": "30",
+      "kode": "E-10",
+      "nama": "Router Wi-Fi",
+      "harga": 500000,
+      "is_ready": true,
+      "gambar": "router-wifi.jpg",
+      "category": {
+        "id": 2,
+        "nama": "Elektronik"
+      }
+    },
+    {
+      "id": "31",
+      "kode": "P-06",
+      "nama": "Rok Midi",
+      "harga": 120000,
+      "is_ready": true,
+      "gambar": "rok-midi.jpg",
+      "category": {
+        "id": 3,
+        "nama": "Pakaian"
+      }
+    },
+    {
+      "id": "32",
+      "kode": "P-07",
+      "nama": "Baju Tidur",
+      "harga": 100000,
+      "is_ready": true,
+      "gambar": "baju-tidur.jpg",
+      "category": {
+        "id": 3,
+        "nama": "Pakaian"
+      }
+    },
+    {
+      "id": "33",
+      "kode": "P-08",
+      "nama": "Topi Snapback",
+      "harga": 75000,
+      "is_ready": true,
+      "gambar": "topi-snapback.jpg",
+      "category": {
+        "id": 3,
+        "nama": "Pakaian"
+      }
+    },
+    {
+      "id": "34",
+      "kode": "P-09",
+      "nama": "Sarung Tangan",
+      "harga": 50000,
+      "is_ready": true,
+      "gambar": "sarung-tangan.jpg",
+      "category": {
+        "id": 3,
+        "nama": "Pakaian"
+      }
+    },
+    {
+      "id": "35",
+      "kode": "P-10",
+      "nama": "Scarf",
+      "harga": 60000,
+      "is_ready": true,
+      "gambar": "scarf.jpg",
+      "category": {
+        "id": 3,
+        "nama": "Pakaian"
+      }
+    },
+    {
+      "id": "36",
+      "kode": "K-06",
+      "nama": "Parfum Wanita",
+      "harga": 250000,
+      "is_ready": true,
+      "gambar": "parfum-wanita.jpg",
+      "category": {
+        "id": 4,
+        "nama": "Kecantikan"
+      }
+    },
+    {
+      "id": "37",
+      "kode": "K-07",
+      "nama": "Shampoo Anti Ketombe",
+      "harga": 30000,
+      "is_ready": true,
+      "gambar": "shampoo-anti-ketombe.jpg",
+      "category": {
+        "id": 4,
+        "nama": "Kecantikan"
+      }
+    },
+    {
+      "id": "38",
+      "kode": "K-08",
+      "nama": "Body Lotion",
+      "harga": 45000,
+      "is_ready": true,
+      "gambar": "body-lotion.jpg",
+      "category": {
+        "id": 4,
+        "nama": "Kecantikan"
+      }
+    },
+    {
+      "id": "39",
+      "kode": "K-09",
+      "nama": "Sabun Mandi Cair",
+      "harga": 25000,
+      "is_ready": true,
+      "gambar": "sabun-mandi-cair.jpg",
+      "category": {
+        "id": 4,
+        "nama": "Kecantikan"
+      }
+    },
+    {
+      "id": "40",
+      "kode": "K-10",
+      "nama": "Hair Dryer",
+      "harga": 200000,
+      "is_ready": true,
+      "gambar": "hair-dryer.jpg",
+      "category": {
+        "id": 4,
+        "nama": "Kecantikan"
+      }
+    },
+    {
+      "id": "41",
+      "kode": "R-06",
+      "nama": "Pemanggang Roti",
+      "harga": 300000,
+      "is_ready": true,
+      "gambar": "pemanggang-roti.jpg",
+      "category": {
+        "id": 5,
+        "nama": "Peralatan Rumah Tangga"
+      }
+    },
+    {
+      "id": "42",
+      "kode": "R-07",
+      "nama": "Dispenser Air",
+      "harga": 500000,
+      "is_ready": true,
+      "gambar": "dispenser-air.jpg",
+      "category": {
+        "id": 5,
+        "nama": "Peralatan Rumah Tangga"
+      }
+    },
+    {
+      "id": "43",
+      "kode": "R-08",
+      "nama": "Set Alat Masak",
+      "harga": 600000,
+      "is_ready": true,
+      "gambar": "set-alat-masak.jpg",
+      "category": {
+        "id": 5,
+        "nama": "Peralatan Rumah Tangga"
+      }
+    },
+    {
+      "id": "44",
+      "kode": "R-09",
+      "nama": "Kipas Angin",
+      "harga": 250000,
+      "is_ready": true,
+      "gambar": "kipas-angin.jpg",
+      "category": {
+        "id": 5,
+        "nama": "Peralatan Rumah Tangga"
+      }
+    },
+    {
+      "id": "45",
+      "kode": "R-10",
+      "nama": "Meja Lipat",
+      "harga": 100000,
+      "is_ready": true,
+      "gambar": "meja-lipat.jpg",
+      "category": {
+        "id": 5,
+        "nama": "Peralatan Rumah Tangga"
+      }
+    },
+    {
+      "id": "46",
+      "kode": "B-06",
+      "nama": "Buku Komik",
+      "harga": 45000,
+      "is_ready": true,
+      "gambar": "buku-komik.jpg",
+      "category": {
+        "id": 6,
+        "nama": "Buku"
+      }
+    },
+    {
+      "id": "47",
+      "kode": "B-07",
+      "nama": "Buku Panduan Investasi",
+      "harga": 110000,
+      "is_ready": true,
+      "gambar": "buku-investasi.jpg",
+      "category": {
+        "id": 6,
+        "nama": "Buku"
+      }
+    },
+    {
+      "id": "48",
+      "kode": "B-08",
+      "nama": "Buku Kesehatan",
+      "harga": 85000,
+      "is_ready": true,
+      "gambar": "buku-kesehatan.jpg",
+      "category": {
+        "id": 6,
+        "nama": "Buku"
+      }
+    },
+    {
+      "id": "49",
+      "kode": "B-09",
+      "nama": "Buku Sejarah Dunia",
+      "harga": 90000,
+      "is_ready": true,
+      "gambar": "buku-sejarah.jpg",
+      "category": {
+        "id": 6,
+        "nama": "Buku"
+      }
+    },
+    {
+      "id": "50",
+      "kode": "B-10",
+      "nama": "Antologi Puisi",
+      "harga": 55000,
+      "is_ready": true,
+      "gambar": "antologi-puisi.jpg",
+      "category": {
+        "id": 6,
+        "nama": "Buku"
       }
     }
   ],
   "keranjangs": [
     {
       "jumlah": 3,
-      "total_harga": 48000,
+      "total_harga": 9000000,
       "product": {
-        "id": "1",
-        "kode": "K-01",
-        "nama": "Sate Ayam",
-        "harga": 16000,
+        "id": "3",
+        "kode": "E-03",
+        "nama": "Tablet",
+        "harga": 3000000,
         "is_ready": true,
-        "gambar": "sate-ayam.jpg",
+        "gambar": "tablet.jpg",
         "category": {
-          "id": 1,
-          "nama": "Makanan"
+          "id": 2,
+          "nama": "Elektronik"
         }
       },
-      "id": "4902"
+      "id": "8e93"
+    },
+    {
+      "jumlah": 2,
+      "total_harga": 100000,
+      "product": {
+        "id": "6",
+        "kode": "P-01",
+        "nama": "Kaos Polos",
+        "harga": 50000,
+        "is_ready": true,
+        "gambar": "kaos-polos.jpg",
+        "category": {
+          "id": 3,
+          "nama": "Pakaian"
+        }
+      },
+      "id": "1d73"
+    },
+    {
+      "id": "9626",
+      "jumlah": 1,
+      "total_harga": 2000000,
+      "product": {
+        "id": "4",
+        "kode": "E-04",
+        "nama": "Smartwatch",
+        "harga": 2000000,
+        "is_ready": true,
+        "gambar": "smartwatch.jpg",
+        "category": {
+          "id": 2,
+          "nama": "Elektronik"
+        }
+      }
+    },
+    {
+      "id": "afa4",
+      "jumlah": 1,
+      "total_harga": 300000,
+      "product": {
+        "id": "41",
+        "kode": "R-06",
+        "nama": "Pemanggang Roti",
+        "harga": 300000,
+        "is_ready": true,
+        "gambar": "pemanggang-roti.jpg",
+        "category": {
+          "id": 5,
+          "nama": "Peralatan Rumah Tangga"
+        }
+      }
+    },
+    {
+      "id": "3c4f",
+      "jumlah": 1,
+      "total_harga": 1000000,
+      "product": {
+        "id": "5",
+        "kode": "E-05",
+        "nama": "Headphone Wireless",
+        "harga": 1000000,
+        "is_ready": true,
+        "gambar": "headphone-wireless.jpg",
+        "category": {
+          "id": 2,
+          "nama": "Elektronik"
+        }
+      }
+    },
+    {
+      "id": "77ba",
+      "jumlah": 1,
+      "total_harga": 400000,
+      "product": {
+        "id": "9",
+        "kode": "P-04",
+        "nama": "Sepatu Sneakers",
+        "harga": 400000,
+        "is_ready": true,
+        "gambar": "sepatu-sneakers.jpg",
+        "category": {
+          "id": 3,
+          "nama": "Pakaian"
+        }
+      }
+    },
+    {
+      "id": "0e87",
+      "jumlah": 1,
+      "total_harga": 60000,
+      "product": {
+        "id": "15",
+        "kode": "K-05",
+        "nama": "Blush On",
+        "harga": 60000,
+        "is_ready": true,
+        "gambar": "blush-on.jpg",
+        "category": {
+          "id": 4,
+          "nama": "Kecantikan"
+        }
+      }
+    },
+    {
+      "id": "1941",
+      "jumlah": 1,
+      "total_harga": 800000,
+      "product": {
+        "id": "18",
+        "kode": "R-03",
+        "nama": "Vacuum Cleaner",
+        "harga": 800000,
+        "is_ready": true,
+        "gambar": "vacuum-cleaner.jpg",
+        "category": {
+          "id": 5,
+          "nama": "Peralatan Rumah Tangga"
+        }
+      }
+    },
+    {
+      "id": "c808",
+      "jumlah": 1,
+      "total_harga": 800000,
+      "product": {
+        "id": "29",
+        "kode": "E-09",
+        "nama": "Speaker Bluetooth",
+        "harga": 800000,
+        "is_ready": true,
+        "gambar": "speaker-bluetooth.jpg",
+        "category": {
+          "id": 2,
+          "nama": "Elektronik"
+        }
+      }
     }
   ],
   "pesanans": [
     {
-      "id": "f85b",
-      "total_pembayaran": 76000,
+      "id": "c839",
+      "total_pembayaran": 83000,
       "menus": [
         {
-          "id": "0971",
+          "id": "0ef3",
           "jumlah": 1,
           "total_harga": 12000,
           "product": {
@@ -255,7 +837,24 @@
           }
         },
         {
-          "id": "c441",
+          "id": "6c0d",
+          "jumlah": 1,
+          "total_harga": 10000,
+          "product": {
+            "id": "6",
+            "kode": "K-06",
+            "nama": "Bakso",
+            "harga": 10000,
+            "is_ready": true,
+            "gambar": "bakso.jpg",
+            "category": {
+              "id": 1,
+              "nama": "Makanan"
+            }
+          }
+        },
+        {
+          "id": "6238",
           "jumlah": 1,
           "total_harga": 14000,
           "product": {
@@ -272,8 +871,9 @@
           }
         },
         {
-          "jumlah": 2,
-          "total_harga": 32000,
+          "id": "8245",
+          "jumlah": 1,
+          "total_harga": 16000,
           "product": {
             "id": "1",
             "kode": "K-01",
@@ -285,11 +885,10 @@
               "id": 1,
               "nama": "Makanan"
             }
-          },
-          "id": "3ad4"
+          }
         },
         {
-          "id": "3617",
+          "id": "c3bd",
           "jumlah": 1,
           "total_harga": 18000,
           "product": {
@@ -299,6 +898,23 @@
             "harga": 18000,
             "is_ready": true,
             "gambar": "lontong-opor-ayam.jpg",
+            "category": {
+              "id": 1,
+              "nama": "Makanan"
+            }
+          }
+        },
+        {
+          "id": "d4c3",
+          "jumlah": 1,
+          "total_harga": 13000,
+          "product": {
+            "id": "5",
+            "kode": "K-05",
+            "nama": "Mie Goreng",
+            "harga": 13000,
+            "is_ready": true,
+            "gambar": "mie-goreng.jpg",
             "category": {
               "id": 1,
               "nama": "Makanan"
