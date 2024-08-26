@@ -7,7 +7,7 @@ function Register() {
   const [nama, setNama] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const [success,setSuccess] = useState("");
+  const [, setSuccess] = useState("");
   const [keranjangs] = useState([]);
 
   const handleRegister = async (e) => {
@@ -65,46 +65,56 @@ function Register() {
   };
 
   return (
-    <div className="container mt-5" style={{ maxWidth: "400px" }}>
-      <h1 className="text-center mb-4">Register</h1>
-      <form onSubmit={handleRegister}>
-        <div className="form-group mb-3">
-          <label htmlFor="nama">Nama:</label>
-          <input
-            type="text"
-            id="nama"
-            className="form-control"
-            value={nama}
-            onChange={(e) => setNama(e.target.value)}
-            required
-          />
-        </div>
-        <div className="form-group mb-3">
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            className="form-control"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        {error && <p className="text-danger">{error}</p>}
-        <button type="submit" className="btn btn-primary w-100">
-          Register
-        </button>
-        <p>
-          Udeh punya akun?{" "}
-          <span
-            className="text-primary fw-bold register-button"
-            onClick={toLogin}
-          >
-            Login
-          </span>{" "}
-          Ayo Sini!
-        </p>
-      </form>
+    <div className="container-fluid d-flex justify-content-center align-items-center min-vh-100">
+      <div
+        className="col-md-4 border-1 border p-4 rounded-2 shadow-lg p-3"
+      >
+        <img
+          src="/logo.png"
+          alt="Logo"
+          className="mb-4 mx-auto d-flex"
+          width={50}
+        />
+        <h1 className="text-center mb-4">Register</h1>
+        <form onSubmit={handleRegister}>
+          <div className="form-group mb-3">
+            <label htmlFor="nama">Nama:</label>
+            <input
+              type="text"
+              id="nama"
+              className="form-control"
+              value={nama}
+              onChange={(e) => setNama(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-group mb-3">
+            <label htmlFor="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              className="form-control"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          {error && <p className="text-danger">{error}</p>}
+          <button type="submit" className="btn btn-primary w-100">
+            Register
+          </button>
+          <p className="text-center mt-3">
+            Udeh punya akun?{" "}
+            <span
+              className="text-primary fw-bold register-button"
+              onClick={toLogin}
+            >
+              Login
+            </span>{" "}
+            Ayo Sini!
+          </p>
+        </form>
+      </div>
     </div>
   );
 }

@@ -45,7 +45,12 @@ function Login() {
   return (
     <div className="container-fluid d-flex justify-content-center align-items-center min-vh-100">
       <div className="col-md-4 border-1 border p-4 rounded-2 shadow-lg">
-        <img src="/logo.png" alt="Logo" className="mb-4 mx-auto d-flex" width={50}/>
+        <img
+          src="/logo.png"
+          alt="Logo"
+          className="mb-4 mx-auto d-flex"
+          width={50}
+        />
         <h1 className="text-center mb-4">Login</h1>
         <form onSubmit={handleLogin}>
           <div className="form-group mb-3">
