@@ -657,6 +657,18 @@
         "id": 6,
         "nama": "Buku"
       }
+    },
+    {
+      "id": "51",
+      "kode": "C-01",
+      "nama": "Dildo Merah",
+      "harga": 55000,
+      "is_ready": true,
+      "gambar": "dildo-merah.jpg",
+      "category": {
+        "id": 6,
+        "nama": "Buku"
+      }
     }
   ],
   "keranjangs": [
