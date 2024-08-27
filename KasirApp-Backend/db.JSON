@@ -669,6 +669,25 @@
         "id": 6,
         "nama": "Buku"
       }
+    }
+  ],
+  "keranjangs": [
+    {
+      "jumlah": 3,
+      "total_harga": 9000000,
+      "product": {
+        "id": "3",
+        "kode": "E-03",
+        "nama": "Tablet",
+        "harga": 3000000,
+        "is_ready": true,
+        "gambar": "tablet.jpg",
+        "category": {
+          "id": 2,
+          "nama": "Elektronik"
+        }
+      },
+      "id": "8e93"
     },
     {
       "id": "51",
@@ -1031,7 +1050,6 @@
       }
     }
   ],
-  "keranjangs": [],
   "pesanans": [
     {
       "id": "0d5f",
