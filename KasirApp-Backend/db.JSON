@@ -50,11 +50,23 @@
     },
     {
       "id": "5",
-      "nama": "Peralatan Rumah Tangga"
+      "nama": "Peralatan"
     },
     {
       "id": "6",
       "nama": "Buku"
+    },
+    {
+      "id": "7",
+      "nama": "Alat Musik"
+    },
+    {
+      "id": "8",
+      "nama": "Mainan"
+    },
+    {
+      "id": "9",
+      "nama": "Olahraga"
     }
   ],
   "products": [
@@ -247,7 +259,7 @@
       "gambar": "blender.jpg",
       "category": {
         "id": 5,
-        "nama": "Peralatan Rumah Tangga"
+        "nama": "Peralatan"
       }
     },
     {
@@ -259,7 +271,7 @@
       "gambar": "setrika-listrik.jpg",
       "category": {
         "id": 5,
-        "nama": "Peralatan Rumah Tangga"
+        "nama": "Peralatan"
       }
     },
     {
@@ -271,7 +283,7 @@
       "gambar": "vacuum-cleaner.jpg",
       "category": {
         "id": 5,
-        "nama": "Peralatan Rumah Tangga"
+        "nama": "Peralatan"
       }
     },
     {
@@ -283,7 +295,7 @@
       "gambar": "rice-cooker.jpg",
       "category": {
         "id": 5,
-        "nama": "Peralatan Rumah Tangga"
+        "nama": "Peralatan"
       }
     },
     {
@@ -295,7 +307,7 @@
       "gambar": "kompor-gas.jpg",
       "category": {
         "id": 5,
-        "nama": "Peralatan Rumah Tangga"
+        "nama": "Peralatan"
       }
     },
     {
@@ -547,7 +559,7 @@
       "gambar": "pemanggang-roti.jpg",
       "category": {
         "id": 5,
-        "nama": "Peralatan Rumah Tangga"
+        "nama": "Peralatan"
       }
     },
     {
@@ -559,7 +571,7 @@
       "gambar": "dispenser-air.jpg",
       "category": {
         "id": 5,
-        "nama": "Peralatan Rumah Tangga"
+        "nama": "Peralatan"
       }
     },
     {
@@ -571,7 +583,7 @@
       "gambar": "set-alat-masak.jpg",
       "category": {
         "id": 5,
-        "nama": "Peralatan Rumah Tangga"
+        "nama": "Peralatan"
       }
     },
     {
@@ -583,7 +595,7 @@
       "gambar": "kipas-angin.jpg",
       "category": {
         "id": 5,
-        "nama": "Peralatan Rumah Tangga"
+        "nama": "Peralatan"
       }
     },
     {
@@ -595,7 +607,7 @@
       "gambar": "meja-lipat.jpg",
       "category": {
         "id": 5,
-        "nama": "Peralatan Rumah Tangga"
+        "nama": "Peralatan"
       }
     },
     {
@@ -657,267 +669,456 @@
         "id": 6,
         "nama": "Buku"
       }
+    },
+    {
+      "id": "51",
+      "kode": "M-01",
+      "nama": "Gitar Akustik",
+      "harga": 1200000,
+      "is_ready": true,
+      "gambar": "gitar-akustik.jpg",
+      "category": {
+        "id": 7,
+        "nama": "Alat Musik"
+      }
+    },
+    {
+      "id": "52",
+      "kode": "M-02",
+      "nama": "Gitar Elektrik",
+      "harga": 1800000,
+      "is_ready": true,
+      "gambar": "gitar-elektrik.jpg",
+      "category": {
+        "id": 7,
+        "nama": "Alat Musik"
+      }
+    },
+    {
+      "id": "53",
+      "kode": "M-03",
+      "nama": "Gitar Klasik",
+      "harga": 1000000,
+      "is_ready": true,
+      "gambar": "gitar-klasik.jpg",
+      "category": {
+        "id": 7,
+        "nama": "Alat Musik"
+      }
+    },
+    {
+      "id": "54",
+      "kode": "M-04",
+      "nama": "Bass Elektrik",
+      "harga": 3200000,
+      "is_ready": true,
+      "gambar": "bass-elektrik.jpg",
+      "category": {
+        "id": 7,
+        "nama": "Alat Musik"
+      }
+    },
+    {
+      "id": "55",
+      "kode": "M-05",
+      "nama": "Ukulele",
+      "harga": 940000,
+      "is_ready": true,
+      "gambar": "ukulele.jpg",
+      "category": {
+        "id": 7,
+        "nama": "Alat Musik"
+      }
+    },
+    {
+      "id": "56",
+      "kode": "M-06",
+      "nama": "Biola",
+      "harga": 2300000,
+      "is_ready": true,
+      "gambar": "biola.jpg",
+      "category": {
+        "id": 7,
+        "nama": "Alat Musik"
+      }
+    },
+    {
+      "id": "57",
+      "kode": "M-07",
+      "nama": "Drum",
+      "harga": 4500000,
+      "is_ready": true,
+      "gambar": "drum.jpg",
+      "category": {
+        "id": 7,
+        "nama": "Alat Musik"
+      }
+    },
+    {
+      "id": "58",
+      "kode": "M-08",
+      "nama": "Piano",
+      "harga": 15000000,
+      "is_ready": true,
+      "gambar": "piano.jpg",
+      "category": {
+        "id": 7,
+        "nama": "Alat Musik"
+      }
+    },
+    {
+      "id": "59",
+      "kode": "M-09",
+      "nama": "Gamelan",
+      "harga": 8600000,
+      "is_ready": true,
+      "gambar": "gamelan.jpg",
+      "category": {
+        "id": 7,
+        "nama": "Alat Musik"
+      }
+    },
+    {
+      "id": "60",
+      "kode": "M-10",
+      "nama": "Pianika",
+      "harga": 350000,
+      "is_ready": true,
+      "gambar": "pianika.jpg",
+      "category": {
+        "id": 7,
+        "nama": "Alat Musik"
+      }
+    },
+    {
+      "id": "61",
+      "kode": "T-01",
+      "nama": "Monopoli",
+      "harga": 300000,
+      "is_ready": true,
+      "gambar": "monopoli.jpg",
+      "category": {
+        "id": 7,
+        "nama": "Mainan"
+      }
+    },
+    {
+      "id": "62",
+      "kode": "T-02",
+      "nama": "Lego Batman",
+      "harga": 5000000,
+      "is_ready": true,
+      "gambar": "lego.jpg",
+      "category": {
+        "id": 7,
+        "nama": "Mainan"
+      }
+    },
+    {
+      "id": "63",
+      "kode": "T-03",
+      "nama": "Rubik 3x3",
+      "harga": 450000,
+      "is_ready": true,
+      "gambar": "rubik.jpg",
+      "category": {
+        "id": 7,
+        "nama": "Mainan"
+      }
+    },
+    {
+      "id": "64",
+      "kode": "T-04",
+      "nama": "kartu UNO",
+      "harga": 20000,
+      "is_ready": true,
+      "gambar": "uno.jpg",
+      "category": {
+        "id": 7,
+        "nama": "Mainan"
+      }
+    },
+    {
+      "id": "65",
+      "kode": "T-05",
+      "nama": "Kartu Remi",
+      "harga": 15000,
+      "is_ready": true,
+      "gambar": "kartu-remi.jpg",
+      "category": {
+        "id": 7,
+        "nama": "Mainan"
+      }
+    },
+    {
+      "id": "66",
+      "kode": "T-06",
+      "nama": "Mobil Tamiya",
+      "harga": 120000,
+      "is_ready": true,
+      "gambar": "tamiya.jpg",
+      "category": {
+        "id": 7,
+        "nama": "Mainan"
+      }
+    },
+    {
+      "id": "67",
+      "kode": "T-07",
+      "nama": "Hot Wheels",
+      "harga": 60000,
+      "is_ready": true,
+      "gambar": "hot-wheels.jpg",
+      "category": {
+        "id": 7,
+        "nama": "Mainan"
+      }
+    },
+    {
+      "id": "68",
+      "kode": "T-08",
+      "nama": "Play Doh set",
+      "harga": 320000,
+      "is_ready": true,
+      "gambar": "play-doh.jpg",
+      "category": {
+        "id": 7,
+        "nama": "Mainan"
+      }
+    },
+    {
+      "id": "69",
+      "kode": "T-09",
+      "nama": "Slime",
+      "harga": 17000,
+      "is_ready": true,
+      "gambar": "slime.jpg",
+      "category": {
+        "id": 7,
+        "nama": "Mainan"
+      }
+    },
+    {
+      "id": "70",
+      "kode": "T-10",
+      "nama": "Squishy",
+      "harga": 32000,
+      "is_ready": true,
+      "gambar": "squishy.jpg",
+      "category": {
+        "id": 7,
+        "nama": "Mainan"
+      }
+    },
+    {
+      "id": "71",
+      "kode": "O-01",
+      "nama": "Bola Basket",
+      "harga": 555000,
+      "is_ready": true,
+      "gambar": "bola-basket.jpg",
+      "category": {
+        "id": 7,
+        "nama": "Olahraga"
+      }
+    },
+    {
+      "id": "72",
+      "kode": "O-02",
+      "nama": "Bola Voli",
+      "harga": 420000,
+      "is_ready": true,
+      "gambar": "bola-voli.jpg",
+      "category": {
+        "id": 7,
+        "nama": "Olahraga"
+      }
+    },
+    {
+      "id": "73",
+      "kode": "O-03",
+      "nama": "Bola Futsal",
+      "harga": 250000,
+      "is_ready": true,
+      "gambar": "bola-futsal.jpg",
+      "category": {
+        "id": 7,
+        "nama": "Olahraga"
+      }
+    },
+    {
+      "id": "74",
+      "kode": "O-04",
+      "nama": "Raket Badminton",
+      "harga": 1250000,
+      "is_ready": true,
+      "gambar": "raket-badminton.jpg",
+      "category": {
+        "id": 7,
+        "nama": "Olahraga"
+      }
+    },
+    {
+      "id": "75",
+      "kode": "O-05",
+      "nama": "Raket Tenis",
+      "harga": 1270000,
+      "is_ready": true,
+      "gambar": "raket-tenis.jpg",
+      "category": {
+        "id": 7,
+        "nama": "Olahraga"
+      }
+    },
+    {
+      "id": "76",
+      "kode": "O-06",
+      "nama": "Raket Golf",
+      "harga": 32500000,
+      "is_ready": true,
+      "gambar": "raket-golf.jpg",
+      "category": {
+        "id": 7,
+        "nama": "Olahraga"
+      }
+    },
+    {
+      "id": "77",
+      "kode": "O-07",
+      "nama": "Sepeda",
+      "harga": 1100000,
+      "is_ready": true,
+      "gambar": "sepeda.jpg",
+      "category": {
+        "id": 7,
+        "nama": "Olahraga"
+      }
+    },
+    {
+      "id": "78",
+      "kode": "O-08",
+      "nama": "Pull Up Bar",
+      "harga": 1500000,
+      "is_ready": true,
+      "gambar": "pullup-bar.jpg",
+      "category": {
+        "id": 7,
+        "nama": "Olahraga"
+      }
+    },
+    {
+      "id": "79",
+      "kode": "O-09",
+      "nama": "Skateboard",
+      "harga": 1000000,
+      "is_ready": true,
+      "gambar": "skateboard.jpg",
+      "category": {
+        "id": 7,
+        "nama": "Olahraga"
+      }
+    },
+    {
+      "id": "80",
+      "kode": "O-10",
+      "nama": "Samsak Tinju",
+      "harga": 520000,
+      "is_ready": true,
+      "gambar": "samsak-tinju.jpg",
+      "category": {
+        "id": 7,
+        "nama": "Olahraga"
+      }
     }
   ],
-  "keranjangs": [
-    {
-      "jumlah": 3,
-      "total_harga": 9000000,
-      "product": {
-        "id": "3",
-        "kode": "E-03",
-        "nama": "Tablet",
-        "harga": 3000000,
-        "is_ready": true,
-        "gambar": "tablet.jpg",
-        "category": {
-          "id": 2,
-          "nama": "Elektronik"
-        }
-      },
-      "id": "8e93"
-    },
-    {
-      "jumlah": 2,
-      "total_harga": 100000,
-      "product": {
-        "id": "6",
-        "kode": "P-01",
-        "nama": "Kaos Polos",
-        "harga": 50000,
-        "is_ready": true,
-        "gambar": "kaos-polos.jpg",
-        "category": {
-          "id": 3,
-          "nama": "Pakaian"
-        }
-      },
-      "id": "1d73"
-    },
-    {
-      "id": "9626",
-      "jumlah": 1,
-      "total_harga": 2000000,
-      "product": {
-        "id": "4",
-        "kode": "E-04",
-        "nama": "Smartwatch",
-        "harga": 2000000,
-        "is_ready": true,
-        "gambar": "smartwatch.jpg",
-        "category": {
-          "id": 2,
-          "nama": "Elektronik"
-        }
-      }
-    },
-    {
-      "id": "afa4",
-      "jumlah": 1,
-      "total_harga": 300000,
-      "product": {
-        "id": "41",
-        "kode": "R-06",
-        "nama": "Pemanggang Roti",
-        "harga": 300000,
-        "is_ready": true,
-        "gambar": "pemanggang-roti.jpg",
-        "category": {
-          "id": 5,
-          "nama": "Peralatan Rumah Tangga"
-        }
-      }
-    },
-    {
-      "id": "3c4f",
-      "jumlah": 1,
-      "total_harga": 1000000,
-      "product": {
-        "id": "5",
-        "kode": "E-05",
-        "nama": "Headphone Wireless",
-        "harga": 1000000,
-        "is_ready": true,
-        "gambar": "headphone-wireless.jpg",
-        "category": {
-          "id": 2,
-          "nama": "Elektronik"
-        }
-      }
-    },
-    {
-      "id": "77ba",
-      "jumlah": 1,
-      "total_harga": 400000,
-      "product": {
-        "id": "9",
-        "kode": "P-04",
-        "nama": "Sepatu Sneakers",
-        "harga": 400000,
-        "is_ready": true,
-        "gambar": "sepatu-sneakers.jpg",
-        "category": {
-          "id": 3,
-          "nama": "Pakaian"
-        }
-      }
-    },
-    {
-      "id": "0e87",
-      "jumlah": 1,
-      "total_harga": 60000,
-      "product": {
-        "id": "15",
-        "kode": "K-05",
-        "nama": "Blush On",
-        "harga": 60000,
-        "is_ready": true,
-        "gambar": "blush-on.jpg",
-        "category": {
-          "id": 4,
-          "nama": "Kecantikan"
-        }
-      }
-    },
-    {
-      "id": "1941",
-      "jumlah": 1,
-      "total_harga": 800000,
-      "product": {
-        "id": "18",
-        "kode": "R-03",
-        "nama": "Vacuum Cleaner",
-        "harga": 800000,
-        "is_ready": true,
-        "gambar": "vacuum-cleaner.jpg",
-        "category": {
-          "id": 5,
-          "nama": "Peralatan Rumah Tangga"
-        }
-      }
-    },
-    {
-      "id": "c808",
-      "jumlah": 1,
-      "total_harga": 800000,
-      "product": {
-        "id": "29",
-        "kode": "E-09",
-        "nama": "Speaker Bluetooth",
-        "harga": 800000,
-        "is_ready": true,
-        "gambar": "speaker-bluetooth.jpg",
-        "category": {
-          "id": 2,
-          "nama": "Elektronik"
-        }
-      }
-    }
-  ],
+  "keranjangs": [],
   "pesanans": [
     {
-      "id": "c839",
-      "total_pembayaran": 83000,
+      "id": "0d5f",
+      "total_pembayaran": 23350000,
       "menus": [
         {
-          "id": "0ef3",
+          "id": "7eda",
           "jumlah": 1,
-          "total_harga": 12000,
-          "product": {
-            "id": "3",
-            "kode": "K-03",
-            "nama": "Nasi Rames",
-            "harga": 12000,
-            "is_ready": true,
-            "gambar": "nasi-rames.jpg",
-            "category": {
-              "id": 1,
-              "nama": "Makanan"
-            }
-          }
-        },
-        {
-          "id": "6c0d",
-          "jumlah": 1,
-          "total_harga": 10000,
-          "product": {
-            "id": "6",
-            "kode": "K-06",
-            "nama": "Bakso",
-            "harga": 10000,
-            "is_ready": true,
-            "gambar": "bakso.jpg",
-            "category": {
-              "id": 1,
-              "nama": "Makanan"
-            }
-          }
-        },
-        {
-          "id": "6238",
-          "jumlah": 1,
-          "total_harga": 14000,
-          "product": {
-            "id": "2",
-            "kode": "K-02",
-            "nama": "Nasi Goreng Telur",
-            "harga": 14000,
-            "is_ready": true,
-            "gambar": "nasi-goreng-telor.jpg",
-            "category": {
-              "id": 1,
-              "nama": "Makanan"
-            }
-          }
-        },
-        {
-          "id": "8245",
-          "jumlah": 1,
-          "total_harga": 16000,
+          "total_harga": 15000000,
           "product": {
             "id": "1",
-            "kode": "K-01",
-            "nama": "Sate Ayam",
-            "harga": 16000,
+            "kode": "E-01",
+            "nama": "Laptop Gaming",
+            "harga": 15000000,
             "is_ready": true,
-            "gambar": "sate-ayam.jpg",
+            "gambar": "laptop-gaming.jpg",
             "category": {
-              "id": 1,
-              "nama": "Makanan"
+              "id": 2,
+              "nama": "Elektronik"
             }
           }
         },
         {
-          "id": "c3bd",
+          "id": "8290",
           "jumlah": 1,
-          "total_harga": 18000,
+          "total_harga": 5000000,
           "product": {
-            "id": "4",
-            "kode": "K-04",
-            "nama": "Lontong Opor Ayam",
-            "harga": 18000,
+            "id": "2",
+            "kode": "E-02",
+            "nama": "Smartphone Android",
+            "harga": 5000000,
             "is_ready": true,
-            "gambar": "lontong-opor-ayam.jpg",
+            "gambar": "smartphone-android.jpg",
             "category": {
-              "id": 1,
-              "nama": "Makanan"
+              "id": 2,
+              "nama": "Elektronik"
             }
           }
         },
         {
-          "id": "d4c3",
+          "id": "4075",
           "jumlah": 1,
-          "total_harga": 13000,
+          "total_harga": 3000000,
           "product": {
-            "id": "5",
-            "kode": "K-05",
-            "nama": "Mie Goreng",
-            "harga": 13000,
+            "id": "3",
+            "kode": "E-03",
+            "nama": "Tablet",
+            "harga": 3000000,
             "is_ready": true,
-            "gambar": "mie-goreng.jpg",
+            "gambar": "tablet.jpg",
             "category": {
-              "id": 1,
-              "nama": "Makanan"
+              "id": 2,
+              "nama": "Elektronik"
+            }
+          }
+        },
+        {
+          "id": "75f0",
+          "jumlah": 1,
+          "total_harga": 300000,
+          "product": {
+            "id": "8",
+            "kode": "P-03",
+            "nama": "Jeans Skinny",
+            "harga": 300000,
+            "is_ready": true,
+            "gambar": "jeans-skinny.jpg",
+            "category": {
+              "id": 3,
+              "nama": "Pakaian"
+            }
+          }
+        },
+        {
+          "id": "1bf4",
+          "jumlah": 1,
+          "total_harga": 50000,
+          "product": {
+            "id": "6",
+            "kode": "P-01",
+            "nama": "Kaos Polos",
+            "harga": 50000,
+            "is_ready": true,
+            "gambar": "kaos-polos.jpg",
+            "category": {
+              "id": 3,
+              "nama": "Pakaian"
             }
           }
         }
